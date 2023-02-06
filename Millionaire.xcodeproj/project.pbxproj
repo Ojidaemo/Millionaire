@@ -20,6 +20,8 @@
 		8791033D2990FF7A00E6CE83 /* timer.mp3.wav in Resources */ = {isa = PBXBuildFile; fileRef = 879103382990FF7A00E6CE83 /* timer.mp3.wav */; };
 		87BE26832991049900BAFB28 /* RulesStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87BE26822991049900BAFB28 /* RulesStoryboard.storyboard */; };
 		87BE2685299104A800BAFB28 /* RulesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BE2684299104A800BAFB28 /* RulesViewController.swift */; };
+		FCCA7D38299154D1004E460B /* QuestionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCCA7D37299154D1004E460B /* QuestionsViewController.swift */; };
+		FCCA7D3A299154EA004E460B /* QuestionsStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCCA7D39299154EA004E460B /* QuestionsStoryboard.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +40,8 @@
 		879103382990FF7A00E6CE83 /* timer.mp3.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = timer.mp3.wav; sourceTree = "<group>"; };
 		87BE26822991049900BAFB28 /* RulesStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = RulesStoryboard.storyboard; sourceTree = "<group>"; };
 		87BE2684299104A800BAFB28 /* RulesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RulesViewController.swift; sourceTree = "<group>"; };
+		FCCA7D37299154D1004E460B /* QuestionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionsViewController.swift; sourceTree = "<group>"; };
+		FCCA7D39299154EA004E460B /* QuestionsStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = QuestionsStoryboard.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +98,7 @@
 		879103302990FDFA00E6CE83 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				FCCA7D37299154D1004E460B /* QuestionsViewController.swift */,
 				8791031F2990FD6D00E6CE83 /* ViewController.swift */,
 				87BE2684299104A800BAFB28 /* RulesViewController.swift */,
 			);
@@ -103,6 +108,7 @@
 		879103312990FE0300E6CE83 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				FCCA7D39299154EA004E460B /* QuestionsStoryboard.storyboard */,
 				879103212990FD6D00E6CE83 /* Main.storyboard */,
 				87BE26822991049900BAFB28 /* RulesStoryboard.storyboard */,
 			);
@@ -193,6 +199,7 @@
 				87BE26832991049900BAFB28 /* RulesStoryboard.storyboard in Resources */,
 				8791033A2990FF7A00E6CE83 /* wrongAnswer.wav in Resources */,
 				8791033B2990FF7A00E6CE83 /* win.wav in Resources */,
+				FCCA7D3A299154EA004E460B /* QuestionsStoryboard.storyboard in Resources */,
 				879103232990FD6D00E6CE83 /* Main.storyboard in Resources */,
 				879103392990FF7A00E6CE83 /* correctAnswer.wav in Resources */,
 			);
@@ -206,6 +213,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				879103202990FD6D00E6CE83 /* ViewController.swift in Sources */,
+				FCCA7D38299154D1004E460B /* QuestionsViewController.swift in Sources */,
 				8791031C2990FD6D00E6CE83 /* AppDelegate.swift in Sources */,
 				87BE2685299104A800BAFB28 /* RulesViewController.swift in Sources */,
 				8791031E2990FD6D00E6CE83 /* SceneDelegate.swift in Sources */,

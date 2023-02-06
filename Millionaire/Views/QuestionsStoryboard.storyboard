@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Questions View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController id="Y6W-OH-hqX" customClass="QuestionsViewController" customModule="Millionaire" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="emptyBack" translatesAutoresizingMaskIntoConstraints="NO" id="oei-mB-FIw">
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="upI-eF-TbN">
+                                <rect key="frame" x="154" y="57.000000000000007" width="82.666666666666686" height="65.666666666666686"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="65.609999999999999" id="d9l-ax-yQi"/>
+                                    <constraint firstAttribute="width" constant="82.5" id="iof-qH-fgn"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="81.5" id="jUh-xa-Azz"/>
+                                    <constraint firstAttribute="height" constant="65.609999999999999" id="qoH-eJ-LQC"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gwE-rG-yq2">
+                                <rect key="frame" x="35" y="135.66666666666666" width="321" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="CA2-gB-6e9"/>
+                                    <constraint firstAttribute="width" constant="321" id="Lnb-kq-qGr"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Вопрос 15                       1 Миллион">
+                                    <backgroundConfiguration key="background" image="Rectangle blue"/>
+                                    <fontDescription key="titleFontDescription" type="system" weight="light" pointSize="20"/>
+                                </buttonConfiguration>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DgJ-HO-0zf">
+                                <rect key="frame" x="35" y="178.66666666666666" width="321" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="AwN-qH-Npc"/>
+                                    <constraint firstAttribute="width" constant="321" id="IYP-on-AWf"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Вопрос 14                   500000 RUB">
+                                    <backgroundConfiguration key="background" image="Rectangle violet"/>
+                                    <fontDescription key="titleFontDescription" type="system" weight="light" pointSize="20"/>
+                                </buttonConfiguration>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oeN-oM-fIo">
+                                <rect key="frame" x="35" y="221.66666666666666" width="321" height="34.999999999999972"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="321" id="L3h-re-LmU"/>
+                                    <constraint firstAttribute="height" constant="35" id="So4-yi-QIG"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Вопрос 13                   250000 RUB">
+                                    <backgroundConfiguration key="background" image="Rectangle violet"/>
+                                    <fontDescription key="titleFontDescription" type="system" weight="light" pointSize="20"/>
+                                </buttonConfiguration>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e41-ek-9TS">
+                                <rect key="frame" x="35" y="264.66666666666669" width="321" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="321" id="Hei-eg-kU1"/>
+                                    <constraint firstAttribute="height" constant="35" id="WgX-QZ-T7O"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Вопрос 12                    125000 RUB">
+                                    <backgroundConfiguration key="background" image="Rectangle violet"/>
+                                    <fontDescription key="titleFontDescription" type="system" weight="light" pointSize="20"/>
+                                </buttonConfiguration>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QSB-Jv-ztW">
+                                <rect key="frame" x="35" y="307.66666666666669" width="321" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="SaP-cX-ZLz"/>
+                                    <constraint firstAttribute="width" constant="321" id="dkL-3t-c3v"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Вопрос 11                      64000 RUB">
+                                    <backgroundConfiguration key="background" image="Rectangle violet"/>
+                                    <fontDescription key="titleFontDescription" type="system" weight="light" pointSize="20"/>
+                                </buttonConfiguration>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U6A-SR-1qG">
+                                <rect key="frame" x="35" y="350.66666666666669" width="321" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="ch2-w4-spy"/>
+                                    <constraint firstAttribute="width" constant="321" id="tQZ-Uv-LZT"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Вопрос 10                      32000 RUB">
+                                    <backgroundConfiguration key="background" image="Rectangle blue"/>
+                                    <fontDescription key="titleFontDescription" type="system" weight="light" pointSize="20"/>
+                                </buttonConfiguration>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eMq-S1-cW5">
+                                <rect key="frame" x="35" y="393.66666666666669" width="321" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="321" id="3NG-qn-RuS"/>
+                                    <constraint firstAttribute="height" constant="35" id="bUd-u1-8jb"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Вопрос 9                        16000 RUB">
+                                    <backgroundConfiguration key="background" image="Rectangle violet"/>
+                                    <fontDescription key="titleFontDescription" type="system" weight="light" pointSize="20"/>
+                                </buttonConfiguration>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gSq-t8-I9S">
+                                <rect key="frame" x="35" y="436.66666666666669" width="321" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="BGl-UJ-VRO"/>
+                                    <constraint firstAttribute="width" constant="321" id="eD0-d8-xQv"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Вопрос 8                          8000 RUB">
+                                    <backgroundConfiguration key="background" image="Rectangle violet"/>
+                                    <fontDescription key="titleFontDescription" type="system" weight="light" pointSize="20"/>
+                                </buttonConfiguration>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="okw-Fn-CK1">
+                                <rect key="frame" x="35" y="479.66666666666669" width="321" height="35.000000000000057"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="CvG-rV-8Vu"/>
+                                    <constraint firstAttribute="width" constant="321" id="dPq-jX-wdO"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Вопрос 7                          4000 RUB">
+                                    <backgroundConfiguration key="background" image="Rectangle violet"/>
+                                    <fontDescription key="titleFontDescription" type="system" weight="light" pointSize="20"/>
+                                </buttonConfiguration>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2cd-QY-cn9">
+                                <rect key="frame" x="35" y="522.66666666666663" width="321" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="321" id="MGe-Eb-vHj"/>
+                                    <constraint firstAttribute="height" constant="35" id="PNo-Bo-LU6"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Вопрос 6                          2000 RUB">
+                                    <backgroundConfiguration key="background" image="Rectangle violet"/>
+                                    <fontDescription key="titleFontDescription" type="system" weight="light" pointSize="20"/>
+                                </buttonConfiguration>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="usd-Kd-hRR">
+                                <rect key="frame" x="35" y="565.66666666666663" width="321" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="P6J-We-T2k"/>
+                                    <constraint firstAttribute="width" constant="321" id="pbB-C0-qEm"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Вопрос 5                           1000 RUB">
+                                    <backgroundConfiguration key="background" image="Rectangle blue"/>
+                                    <fontDescription key="titleFontDescription" type="system" weight="light" pointSize="20"/>
+                                </buttonConfiguration>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UZm-42-xua">
+                                <rect key="frame" x="35" y="608.66666666666663" width="321" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="321" id="0Pf-Ak-71b"/>
+                                    <constraint firstAttribute="height" constant="35" id="sCW-fu-iSL"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Вопрос 4                   ">
+                                    <backgroundConfiguration key="background" image="Rectangle violet"/>
+                                    <fontDescription key="titleFontDescription" type="system" weight="light" pointSize="20"/>
+                                </buttonConfiguration>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="500 RUB" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uDj-Eb-knZ">
+                                <rect key="frame" x="266" y="614" width="79" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="79" id="1pZ-LF-YxW"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2l7-Kv-NrP">
+                                <rect key="frame" x="35" y="737.66666666666663" width="321" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="321" id="P2b-3o-Dqo"/>
+                                    <constraint firstAttribute="height" constant="35" id="pYt-vr-8mM"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Вопрос 1                              100 RUB">
+                                    <backgroundConfiguration key="background" image="Rectangle violet"/>
+                                    <fontDescription key="titleFontDescription" type="system" weight="light" pointSize="20"/>
+                                </buttonConfiguration>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cfg-l5-A7T">
+                                <rect key="frame" x="35" y="651.66666666666663" width="321" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="321" id="Ccd-fC-alf"/>
+                                    <constraint firstAttribute="height" constant="35" id="e1s-UN-L2E"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Вопрос 3                             300 RUB">
+                                    <backgroundConfiguration key="background" image="Rectangle violet"/>
+                                    <fontDescription key="titleFontDescription" type="system" weight="light" pointSize="20"/>
+                                </buttonConfiguration>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l3y-uX-gRf">
+                                <rect key="frame" x="35" y="694.66666666666663" width="321" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="6DJ-k7-YW5"/>
+                                    <constraint firstAttribute="width" constant="321" id="Kyu-MR-6kE"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Вопрос 2                             200 RUB">
+                                    <backgroundConfiguration key="background" image="Rectangle violet"/>
+                                    <fontDescription key="titleFontDescription" type="system" weight="light" pointSize="20"/>
+                                </buttonConfiguration>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="eMq-S1-cW5" firstAttribute="top" secondItem="U6A-SR-1qG" secondAttribute="bottom" constant="8" id="0jl-C8-jgl"/>
+                            <constraint firstItem="QSB-Jv-ztW" firstAttribute="top" secondItem="e41-ek-9TS" secondAttribute="bottom" constant="8" id="1QE-pa-Ic3"/>
+                            <constraint firstItem="2l7-Kv-NrP" firstAttribute="top" secondItem="l3y-uX-gRf" secondAttribute="bottom" constant="8" id="4BJ-eI-ZU8"/>
+                            <constraint firstItem="cfg-l5-A7T" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="35" id="8vr-az-g5w"/>
+                            <constraint firstItem="DgJ-HO-0zf" firstAttribute="top" secondItem="gwE-rG-yq2" secondAttribute="bottom" constant="8" id="Aai-as-DUd"/>
+                            <constraint firstItem="U6A-SR-1qG" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="35" id="B1Y-et-IGO"/>
+                            <constraint firstItem="l3y-uX-gRf" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="35" id="BaX-Y2-nwE"/>
+                            <constraint firstItem="cfg-l5-A7T" firstAttribute="top" secondItem="UZm-42-xua" secondAttribute="bottom" constant="8" id="CBe-7B-urS"/>
+                            <constraint firstItem="uDj-Eb-knZ" firstAttribute="top" secondItem="usd-Kd-hRR" secondAttribute="bottom" constant="13.33" id="EOs-4V-aGb"/>
+                            <constraint firstItem="gSq-t8-I9S" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="35" id="EWq-t5-KJI"/>
+                            <constraint firstItem="okw-Fn-CK1" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="35" id="Nxw-KD-W6Q"/>
+                            <constraint firstItem="UZm-42-xua" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="35" id="Og1-gu-VMm"/>
+                            <constraint firstItem="usd-Kd-hRR" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="35" id="RfQ-H7-56C"/>
+                            <constraint firstItem="gSq-t8-I9S" firstAttribute="top" secondItem="eMq-S1-cW5" secondAttribute="bottom" constant="8" id="SOz-zT-6Eb"/>
+                            <constraint firstItem="gwE-rG-yq2" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="35" id="Vmc-0p-bG4"/>
+                            <constraint firstItem="2cd-QY-cn9" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="35" id="Wng-58-13Z"/>
+                            <constraint firstItem="e41-ek-9TS" firstAttribute="top" secondItem="oeN-oM-fIo" secondAttribute="bottom" constant="8" id="X2P-3h-zcS"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="uDj-Eb-knZ" secondAttribute="trailing" constant="45" id="Ypx-Sv-C0Q"/>
+                            <constraint firstItem="2cd-QY-cn9" firstAttribute="top" secondItem="okw-Fn-CK1" secondAttribute="bottom" constant="8" id="ZMC-qS-8m0"/>
+                            <constraint firstItem="upI-eF-TbN" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="154" id="c49-ZU-I0c"/>
+                            <constraint firstItem="DgJ-HO-0zf" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="35" id="cwY-14-C0b"/>
+                            <constraint firstItem="oeN-oM-fIo" firstAttribute="top" secondItem="DgJ-HO-0zf" secondAttribute="bottom" constant="8" id="d8Y-NI-FzI"/>
+                            <constraint firstItem="oeN-oM-fIo" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="35" id="dbQ-EP-XVy"/>
+                            <constraint firstItem="2l7-Kv-NrP" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="35" id="fPs-MM-Wj3"/>
+                            <constraint firstItem="UZm-42-xua" firstAttribute="top" secondItem="usd-Kd-hRR" secondAttribute="bottom" constant="8" id="jUR-SM-pgh"/>
+                            <constraint firstItem="e41-ek-9TS" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="35" id="kNT-uO-NcH"/>
+                            <constraint firstItem="okw-Fn-CK1" firstAttribute="top" secondItem="gSq-t8-I9S" secondAttribute="bottom" constant="8" id="nHy-6w-wVK"/>
+                            <constraint firstItem="upI-eF-TbN" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="10" id="pfy-59-kXR"/>
+                            <constraint firstItem="U6A-SR-1qG" firstAttribute="top" secondItem="QSB-Jv-ztW" secondAttribute="bottom" constant="8" id="pv0-yg-e8L"/>
+                            <constraint firstItem="gwE-rG-yq2" firstAttribute="top" secondItem="upI-eF-TbN" secondAttribute="bottom" constant="13" id="t16-j6-WHM"/>
+                            <constraint firstItem="usd-Kd-hRR" firstAttribute="top" secondItem="2cd-QY-cn9" secondAttribute="bottom" constant="8" id="tOT-ih-8wk"/>
+                            <constraint firstItem="l3y-uX-gRf" firstAttribute="top" secondItem="cfg-l5-A7T" secondAttribute="bottom" constant="8" id="veO-u5-4CS"/>
+                            <constraint firstItem="QSB-Jv-ztW" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="35" id="wDT-qp-Fih"/>
+                            <constraint firstItem="eMq-S1-cW5" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="35" id="wuG-6o-W82"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="16.923076923076923" y="-2.1327014218009479"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Rectangle blue" width="320" height="38"/>
+        <image name="Rectangle violet" width="320" height="38"/>
+        <image name="emptyBack" width="1242" height="2208"/>
+        <image name="logo" width="512" height="512"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
