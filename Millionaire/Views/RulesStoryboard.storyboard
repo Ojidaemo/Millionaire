@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Rules View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController id="Y6W-OH-hqX" customClass="RulesViewController" customModule="Millionaire" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="emptyBack" translatesAutoresizingMaskIntoConstraints="NO" id="UK3-VV-4Ll">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Правила игры" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cbs-Qa-4Kx">
+                                <rect key="frame" x="20" y="69" width="353" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JM8-A2-i7Z">
+                                <rect key="frame" x="88.333333333333329" y="748" width="216.66666666666669" height="50"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Главное меню">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="30"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="mainMenuPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="qnD-lH-ION"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M9m-mj-AFG">
+                                <rect key="frame" x="20" y="115" width="353" height="623"/>
+                                <string key="text">Игра Кто хочет стать миллионером? - это конкурс викторина, в котором участники должны правильно ответить на ряд вопросов с несколькими вариантами ответов, чтобы перейти на следующий уровень. Всего 15 вопросов, каждый вопрос стоит определенной суммы денег, участники не имеют никаких временных ограничений для предоставления ответа. Участники также получают три вида подсказок, чтобы помочь себе, если они застряли на конкретном вопросе.
+
+Важно помнить, что вопросы, составляющие каждый уровень, не обязательно будут относиться к одним и тем же или даже сходным темам. Немаловажно, что уровни вопросов не следует путать с «несгораемыми суммами» или структурой ценностей вопросов, что они собой являют объясняется ниже.
+
+Вопрос 1 100 руб.
+Вопрос 2 200 руб.
+Вопрос 3 300 руб.
+Вопрос 4 500 руб.
+Вопрос 5 - 1000 руб. Несгораемая сумма.
+
+Если участники неправильно отвечают на последний вопрос вопрос, то они уходят ни с чем. Если на этот вопрос дан правильный ответ, участникам гарантируется 1000 рублей, даже если дадут неверный ответ до достижения следующей несгораемой суммы в десятом вопросе.
+
+Вопрос 6 2000 руб.
+Вопрос 7 4000 руб.
+Вопрос 8 8000 руб.
+Вопрос 9 16 000 руб.
+Вопрос 10 - 32 000 руб. Несгораемая сумма.
+
+Если участники неправильно ответят на этот вопрос, они уйдут с 1000 рублей. Если на этот вопрос ответили верно, игрокам гарантируется 32 000 рублей, даже если дадут неверный ответ до достижения вопроса 15.
+
+Вопрос 11 64 000 руб.
+Вопрос 12 125 000 руб.
+Вопрос 13 250 000 руб.
+Вопрос 14 500 000 руб.
+Вопрос 15 - 1 000 000 руб.
+
+Подсказки
+Участникам разрешается применить три подсказки, которые они могут использовать в любой момент викторины. Каждая из подсказок может быть использована только один раз.
+
+50/50 - исключает два неправильных ответа из множественного выбора, оставляя участнику только один правильный и один неправильный вариант. Это означает, что у него есть шанс 50/50.
+
+Помощь зала - залу задают тот же вопрос, что и участнику, и проводится быстрый опрос, чтобы показать их ответы. С вероятностью 70% дается верный ответ.
+
+Звонок другу - с вероятностью 80% дается верный ответ.
+
+</string>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="M9m-mj-AFG" secondAttribute="trailing" constant="20" id="5Yq-qM-8cG"/>
+                            <constraint firstItem="JM8-A2-i7Z" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="Gay-pB-Kyp"/>
+                            <constraint firstItem="UK3-VV-4Ll" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="K06-C7-SXx"/>
+                            <constraint firstItem="UK3-VV-4Ll" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" id="Nqp-xd-Mbc"/>
+                            <constraint firstAttribute="trailing" secondItem="UK3-VV-4Ll" secondAttribute="trailing" id="Odj-0z-qef"/>
+                            <constraint firstItem="Cbs-Qa-4Kx" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="10" id="frM-Qn-z4Z"/>
+                            <constraint firstItem="Cbs-Qa-4Kx" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="gue-fr-5Bt"/>
+                            <constraint firstItem="JM8-A2-i7Z" firstAttribute="top" secondItem="M9m-mj-AFG" secondAttribute="bottom" constant="10" id="lI6-jd-rbz"/>
+                            <constraint firstAttribute="bottom" secondItem="UK3-VV-4Ll" secondAttribute="bottom" id="of7-uO-OUu"/>
+                            <constraint firstItem="M9m-mj-AFG" firstAttribute="top" secondItem="Cbs-Qa-4Kx" secondAttribute="bottom" constant="10" id="ok3-sN-Ojy"/>
+                            <constraint firstItem="JM8-A2-i7Z" firstAttribute="bottom" secondItem="vDu-zF-Fre" secondAttribute="bottom" constant="-20" id="px7-3m-o8N"/>
+                            <constraint firstItem="M9m-mj-AFG" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="uur-yM-41M"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Cbs-Qa-4Kx" secondAttribute="trailing" constant="20" id="wsu-wI-POT"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="45" y="-2"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="emptyBack" width="1242" height="2208"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
