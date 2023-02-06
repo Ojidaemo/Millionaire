@@ -13,6 +13,11 @@
 		879103232990FD6D00E6CE83 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 879103212990FD6D00E6CE83 /* Main.storyboard */; };
 		879103252990FD6E00E6CE83 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 879103242990FD6E00E6CE83 /* Assets.xcassets */; };
 		879103282990FD6E00E6CE83 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 879103262990FD6E00E6CE83 /* LaunchScreen.storyboard */; };
+		879103392990FF7A00E6CE83 /* correctAnswer.wav in Resources */ = {isa = PBXBuildFile; fileRef = 879103342990FF7900E6CE83 /* correctAnswer.wav */; };
+		8791033A2990FF7A00E6CE83 /* wrongAnswer.wav in Resources */ = {isa = PBXBuildFile; fileRef = 879103352990FF7900E6CE83 /* wrongAnswer.wav */; };
+		8791033B2990FF7A00E6CE83 /* win.wav in Resources */ = {isa = PBXBuildFile; fileRef = 879103362990FF7900E6CE83 /* win.wav */; };
+		8791033C2990FF7A00E6CE83 /* answerAccepted.wav in Resources */ = {isa = PBXBuildFile; fileRef = 879103372990FF7A00E6CE83 /* answerAccepted.wav */; };
+		8791033D2990FF7A00E6CE83 /* timer.mp3.wav in Resources */ = {isa = PBXBuildFile; fileRef = 879103382990FF7A00E6CE83 /* timer.mp3.wav */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +29,11 @@
 		879103242990FD6E00E6CE83 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		879103272990FD6E00E6CE83 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		879103292990FD6E00E6CE83 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		879103342990FF7900E6CE83 /* correctAnswer.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = correctAnswer.wav; sourceTree = "<group>"; };
+		879103352990FF7900E6CE83 /* wrongAnswer.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = wrongAnswer.wav; sourceTree = "<group>"; };
+		879103362990FF7900E6CE83 /* win.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = win.wav; sourceTree = "<group>"; };
+		879103372990FF7A00E6CE83 /* answerAccepted.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = answerAccepted.wav; sourceTree = "<group>"; };
+		879103382990FF7A00E6CE83 /* timer.mp3.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = timer.mp3.wav; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +66,60 @@
 		8791031A2990FD6D00E6CE83 /* Millionaire */ = {
 			isa = PBXGroup;
 			children = (
-				8791031B2990FD6D00E6CE83 /* AppDelegate.swift */,
-				8791031D2990FD6D00E6CE83 /* SceneDelegate.swift */,
-				8791031F2990FD6D00E6CE83 /* ViewController.swift */,
-				879103212990FD6D00E6CE83 /* Main.storyboard */,
+				879103322990FE0C00E6CE83 /* Model */,
+				879103312990FE0300E6CE83 /* Views */,
+				879103302990FDFA00E6CE83 /* Controllers */,
+				8791032F2990FDF100E6CE83 /* App */,
+				879103332990FED500E6CE83 /* Sounds */,
 				879103242990FD6E00E6CE83 /* Assets.xcassets */,
 				879103262990FD6E00E6CE83 /* LaunchScreen.storyboard */,
 				879103292990FD6E00E6CE83 /* Info.plist */,
 			);
 			path = Millionaire;
+			sourceTree = "<group>";
+		};
+		8791032F2990FDF100E6CE83 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				8791031B2990FD6D00E6CE83 /* AppDelegate.swift */,
+				8791031D2990FD6D00E6CE83 /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		879103302990FDFA00E6CE83 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				8791031F2990FD6D00E6CE83 /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		879103312990FE0300E6CE83 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				879103212990FD6D00E6CE83 /* Main.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		879103322990FE0C00E6CE83 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		879103332990FED500E6CE83 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				879103372990FF7A00E6CE83 /* answerAccepted.wav */,
+				879103342990FF7900E6CE83 /* correctAnswer.wav */,
+				879103382990FF7A00E6CE83 /* timer.mp3.wav */,
+				879103362990FF7900E6CE83 /* win.wav */,
+				879103352990FF7900E6CE83 /* wrongAnswer.wav */,
+			);
+			path = Sounds;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,9 +180,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8791033D2990FF7A00E6CE83 /* timer.mp3.wav in Resources */,
+				8791033C2990FF7A00E6CE83 /* answerAccepted.wav in Resources */,
 				879103282990FD6E00E6CE83 /* LaunchScreen.storyboard in Resources */,
 				879103252990FD6E00E6CE83 /* Assets.xcassets in Resources */,
+				8791033A2990FF7A00E6CE83 /* wrongAnswer.wav in Resources */,
+				8791033B2990FF7A00E6CE83 /* win.wav in Resources */,
 				879103232990FD6D00E6CE83 /* Main.storyboard in Resources */,
+				879103392990FF7A00E6CE83 /* correctAnswer.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -292,8 +352,9 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -301,9 +362,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.ojidaemo.Millionaire;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -319,8 +383,9 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -328,9 +393,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.ojidaemo.Millionaire;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
