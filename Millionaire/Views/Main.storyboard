@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Main View Controller-->
+        <!--View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController id="Y6W-OH-hqX" customClass="MainViewController" customModule="Millionaire" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Y6W-OH-hqX" customClass="ViewController" customModule="Millionaire" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -30,7 +30,8 @@
                                     <fontDescription key="titleFontDescription" type="system" pointSize="25"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="rulesButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="1Nr-dR-ROU"/>
+                                    <action selector="RulesButtonPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="cfK-ei-QGh"/>
+                                    <segue destination="ovO-L3-pU8" kind="show" id="5PV-oV-KzP"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Добро пожаловать в ИГРУ" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iY9-dG-hF6">
@@ -50,7 +51,7 @@
                                     <fontDescription key="titleFontDescription" type="system" pointSize="25"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="newGameButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="QxB-jB-F0G"/>
+                                    <action selector="NewGameButtonPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="NVg-P1-Wr0"/>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="i1E-dd-7zw">
@@ -77,6 +78,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1982.4427480916029" y="-34.507042253521128"/>
+        </scene>
+        <!--Rules-->
+        <scene sceneID="d00-Wi-Ymt">
+            <objects>
+                <viewControllerPlaceholder storyboardName="RulesStoryboard" referencedIdentifier="Rules" id="ovO-L3-pU8" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="Ato-Y3-FUg"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fur-f2-BzV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2636" y="-58"/>
         </scene>
     </scenes>
     <resources>
