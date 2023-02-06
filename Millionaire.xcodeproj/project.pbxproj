@@ -10,9 +10,7 @@
 		8791031C2990FD6D00E6CE83 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8791031B2990FD6D00E6CE83 /* AppDelegate.swift */; };
 		8791031E2990FD6D00E6CE83 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8791031D2990FD6D00E6CE83 /* SceneDelegate.swift */; };
 		879103202990FD6D00E6CE83 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8791031F2990FD6D00E6CE83 /* ViewController.swift */; };
-		879103232990FD6D00E6CE83 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 879103212990FD6D00E6CE83 /* Main.storyboard */; };
 		879103252990FD6E00E6CE83 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 879103242990FD6E00E6CE83 /* Assets.xcassets */; };
-		879103282990FD6E00E6CE83 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 879103262990FD6E00E6CE83 /* LaunchScreen.storyboard */; };
 		879103392990FF7A00E6CE83 /* correctAnswer.wav in Resources */ = {isa = PBXBuildFile; fileRef = 879103342990FF7900E6CE83 /* correctAnswer.wav */; };
 		8791033A2990FF7A00E6CE83 /* wrongAnswer.wav in Resources */ = {isa = PBXBuildFile; fileRef = 879103352990FF7900E6CE83 /* wrongAnswer.wav */; };
 		8791033B2990FF7A00E6CE83 /* win.wav in Resources */ = {isa = PBXBuildFile; fileRef = 879103362990FF7900E6CE83 /* win.wav */; };
@@ -21,6 +19,7 @@
 		87BE26832991049900BAFB28 /* RulesStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87BE26822991049900BAFB28 /* RulesStoryboard.storyboard */; };
 		87BE2685299104A800BAFB28 /* RulesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BE2684299104A800BAFB28 /* RulesViewController.swift */; };
 		C632C0CE299158A7005E66ED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C632C0CD299158A7005E66ED /* Main.storyboard */; };
+		C632C0D029915A0A005E66ED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C632C0CF29915A0A005E66ED /* LaunchScreen.storyboard */; };
 		FCCA7D38299154D1004E460B /* QuestionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCCA7D37299154D1004E460B /* QuestionsViewController.swift */; };
 		FCCA7D3A299154EA004E460B /* QuestionsStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCCA7D39299154EA004E460B /* QuestionsStoryboard.storyboard */; };
 /* End PBXBuildFile section */
@@ -30,9 +29,7 @@
 		8791031B2990FD6D00E6CE83 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8791031D2990FD6D00E6CE83 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		8791031F2990FD6D00E6CE83 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		879103222990FD6D00E6CE83 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		879103242990FD6E00E6CE83 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		879103272990FD6E00E6CE83 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		879103292990FD6E00E6CE83 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		879103342990FF7900E6CE83 /* correctAnswer.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = correctAnswer.wav; sourceTree = "<group>"; };
 		879103352990FF7900E6CE83 /* wrongAnswer.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = wrongAnswer.wav; sourceTree = "<group>"; };
@@ -42,6 +39,7 @@
 		87BE26822991049900BAFB28 /* RulesStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = RulesStoryboard.storyboard; sourceTree = "<group>"; };
 		87BE2684299104A800BAFB28 /* RulesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RulesViewController.swift; sourceTree = "<group>"; };
 		C632C0CD299158A7005E66ED /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		C632C0CF29915A0A005E66ED /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FCCA7D37299154D1004E460B /* QuestionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionsViewController.swift; sourceTree = "<group>"; };
 		FCCA7D39299154EA004E460B /* QuestionsStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = QuestionsStoryboard.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -82,7 +80,7 @@
 				8791032F2990FDF100E6CE83 /* App */,
 				879103332990FED500E6CE83 /* Sounds */,
 				879103242990FD6E00E6CE83 /* Assets.xcassets */,
-				879103262990FD6E00E6CE83 /* LaunchScreen.storyboard */,
+				C632C0CF29915A0A005E66ED /* LaunchScreen.storyboard */,
 				879103292990FD6E00E6CE83 /* Info.plist */,
 			);
 			path = Millionaire;
@@ -112,7 +110,6 @@
 			children = (
 				C632C0CD299158A7005E66ED /* Main.storyboard */,
 				FCCA7D39299154EA004E460B /* QuestionsStoryboard.storyboard */,
-				879103212990FD6D00E6CE83 /* Main.storyboard */,
 				87BE26822991049900BAFB28 /* RulesStoryboard.storyboard */,
 			);
 			path = Views;
@@ -197,14 +194,13 @@
 			files = (
 				8791033D2990FF7A00E6CE83 /* timer.mp3.wav in Resources */,
 				8791033C2990FF7A00E6CE83 /* answerAccepted.wav in Resources */,
-				879103282990FD6E00E6CE83 /* LaunchScreen.storyboard in Resources */,
 				879103252990FD6E00E6CE83 /* Assets.xcassets in Resources */,
 				87BE26832991049900BAFB28 /* RulesStoryboard.storyboard in Resources */,
 				C632C0CE299158A7005E66ED /* Main.storyboard in Resources */,
 				8791033A2990FF7A00E6CE83 /* wrongAnswer.wav in Resources */,
 				8791033B2990FF7A00E6CE83 /* win.wav in Resources */,
 				FCCA7D3A299154EA004E460B /* QuestionsStoryboard.storyboard in Resources */,
-				879103232990FD6D00E6CE83 /* Main.storyboard in Resources */,
+				C632C0D029915A0A005E66ED /* LaunchScreen.storyboard in Resources */,
 				879103392990FF7A00E6CE83 /* correctAnswer.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -225,25 +221,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		879103212990FD6D00E6CE83 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				879103222990FD6D00E6CE83 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		879103262990FD6E00E6CE83 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				879103272990FD6E00E6CE83 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		8791032A2990FD6E00E6CE83 /* Debug */ = {
