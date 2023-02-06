@@ -14,12 +14,13 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-    @IBAction func RulesButtonPressed(_ sender: UIButton) {
-        let rulesVc = RulesViewController()
-        self.present(rulesVc, animated: true)
+    @IBAction func rulesButtonPressed(_ sender: UIButton) {
+        
+        let rulesVС = RulesViewController()
+        self.present(rulesVС, animated: true)
     }
     
-    @IBAction func NewGameButtonPressed(_ sender: Any) {
+    @IBAction func newGameButtonPressed(_ sender: Any) {
         
     }
 }
