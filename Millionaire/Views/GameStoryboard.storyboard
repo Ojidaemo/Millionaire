@@ -31,7 +31,8 @@
                                             <backgroundConfiguration key="background" image="Rectangle blue"/>
                                         </buttonConfiguration>
                                         <connections>
-                                            <segue destination="vXn-FJ-Fn7" kind="show" id="mIZ-Lm-4TX"/>
+                                            <action selector="answerButtonPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Uak-3F-Fxh"/>
+                                            <segue destination="vXn-FJ-Fn7" kind="presentation" modalPresentationStyle="fullScreen" id="mIZ-Lm-4TX"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oDF-8O-HvQ">
@@ -42,8 +43,9 @@
                                             <backgroundConfiguration key="background" image="Rectangle blue"/>
                                         </buttonConfiguration>
                                         <connections>
+                                            <action selector="answerButtonPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Hzs-YA-fSI"/>
                                             <action selector="chooseAnswerPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="gTX-Rk-ipg"/>
-                                            <segue destination="vXn-FJ-Fn7" kind="show" id="0b0-li-rWn"/>
+                                            <segue destination="vXn-FJ-Fn7" kind="presentation" modalPresentationStyle="fullScreen" id="0b0-li-rWn"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y1B-h2-TH8">
@@ -54,7 +56,8 @@
                                             <backgroundConfiguration key="background" image="Rectangle blue"/>
                                         </buttonConfiguration>
                                         <connections>
-                                            <segue destination="vXn-FJ-Fn7" kind="show" id="JOk-77-b6h"/>
+                                            <action selector="answerButtonPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="CVg-hd-rmg"/>
+                                            <segue destination="vXn-FJ-Fn7" kind="presentation" modalPresentationStyle="fullScreen" id="JOk-77-b6h"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jES-wd-5je">
@@ -65,7 +68,8 @@
                                             <backgroundConfiguration key="background" image="Rectangle blue"/>
                                         </buttonConfiguration>
                                         <connections>
-                                            <segue destination="vXn-FJ-Fn7" kind="show" id="b6X-aw-mxh"/>
+                                            <action selector="answerButtonPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="PX6-zo-qhZ"/>
+                                            <segue destination="vXn-FJ-Fn7" kind="presentation" modalPresentationStyle="fullScreen" id="b6X-aw-mxh"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -210,16 +214,16 @@
         <!--Questions-->
         <scene sceneID="Hh1-Ku-8s5">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="r13-oN-ZTc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewControllerPlaceholder storyboardName="QuestionsStoryboard" referencedIdentifier="Questions" id="vXn-FJ-Fn7" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="vmB-OF-Hfj"/>
                 </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="r13-oN-ZTc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="608" y="25"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="b6X-aw-mxh"/>
+        <segue reference="mIZ-Lm-4TX"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Group 28" width="105" height="81"/>

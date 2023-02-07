@@ -12,7 +12,9 @@ struct QuizBrain {
     
     var questionNumber: Int = 0
     
-    
+    var winMoney: String {
+        quiz[questionNumber].winMoney
+    }
     var currentQuestion: String {
         quiz[questionNumber].ask
     }
