@@ -13,6 +13,7 @@ class GameViewController: UIViewController {
     @IBOutlet weak var numOfQuestion: UILabel!
     @IBOutlet weak var currentQuestion: UILabel!
     
+    @IBOutlet weak var timerLabel: UILabel!
     
     @IBOutlet weak var firstAnswerButton: UIButton!
     
@@ -24,11 +25,14 @@ class GameViewController: UIViewController {
     var answerButtons: [UIButton] = []
     var shuffledAnswers: [String] = []
     var num = 0
+    var timer = Timer()
+    var secondRemaining = 30
     
     override func viewDidLoad() {
         super.viewDidLoad()
         answerButtons = [firstAnswerButton, secondAnswerButton, thirdAnswerButton, fourthAnswerButton]
         updateUI()
+        callTimer()
         
         
     }
@@ -38,19 +42,33 @@ class GameViewController: UIViewController {
         let userAnswer = sender.currentTitle!
         let userGotItRight = quiz.checkAnswer(userAnswer)
         
-        if userGotItRight {
-            quiz.answerStatus = "right"
-            print("right")
-            
-        } else {
-            quiz.answerStatus = "wrong"
-            print("wrong")
-        }
-        quiz.nextQuestion()
-        num = quiz.questionNumber
-        updateUI()
+        // после выбора ответа надо убрать возможность нажимать на кнопки
         
+        // подсветить выбранный вариант пока ждем перехода
+        // добавить музыку "answerAccepted"
+//        sender.isEnabled = true
+//        sender.setTitleColor(.yellow, for: .normal)
+        
+        sender.setBackgroundImage(UIImage(named: "Rectangle yellow"), for: .normal)
+        
+        Timer.scheduledTimer(withTimeInterval: 5, repeats: false) { timer in
+            
+            if userGotItRight {
+                self.quiz.answerStatus = "right"
+                print("right")
+                
+            } else {
+                self.quiz.answerStatus = "wrong"
+                print("wrong")
+            }
+            self.quiz.nextQuestion()
+            self.num = self.quiz.questionNumber
+            self.updateUI()
+            self.performSegue(withIdentifier: "goToQuestions", sender: self)
+            
+        }
     }
+    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.destination is QuestionsViewController {
@@ -70,6 +88,19 @@ class GameViewController: UIViewController {
             let button = answerButtons[index]
             if index < shuffledAnswers.count {
                 button.setTitle(shuffledAnswers[index], for: .normal)
+            }
+        }
+    }
+    
+    func callTimer() {
+        
+        Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { timer in
+            if self.secondRemaining > 0 {
+                self.secondRemaining -= 1
+                self.timerLabel.text = "\(self.secondRemaining)"
+                // добавить музыку "timer.mp3.wav"
+            } else {
+                timer.invalidate()
             }
         }
     }
