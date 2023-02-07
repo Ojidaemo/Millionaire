@@ -11,26 +11,27 @@ class QuestionsViewController: UIViewController {
     
     var numOfQuestion = 0
     var status = ""
-    var questionsArray: [UIButton] = []
+    var questionsArray: [UIImageView] = []
     var quiz = QuizBrain()
     
-    @IBOutlet weak var firstQuestion: UIButton!
+
+    @IBOutlet weak var thirdQuestion: UIImageView!
+    @IBOutlet weak var firstQuestion: UIImageView!
     
-    @IBOutlet weak var secondQuestion: UIButton!
-    
-    @IBOutlet weak var thirdQuestion: UIButton!
-   
+    @IBOutlet weak var secondQuestion: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
         questionsArray = [ firstQuestion, secondQuestion, thirdQuestion ]
-        
+
         print(status)
         for i in 0..<questionsArray.count {
-            if numOfQuestion - 1 == i && status == "right" {
-                questionsArray[i].backgroundColor = .green
+            if numOfQuestion - 1 == i && status == "right" && i != 4 && i != 9 && i != 14 {
+                questionsArray[i].image = UIImage(named: "RectangleGreen.png")
+                //questionsArray[i].backgroundColor = .green
             }
-            else if numOfQuestion - 1 == i && status == "wrong" {
-                questionsArray[i].backgroundColor = .red
+            else if numOfQuestion - 1 == i && status == "wrong" && i != 4 && i != 9 && i != 14 {
+                questionsArray[i].image = UIImage(named: "Rectangle red")
+                //questionsArray[i].backgroundColor = .red
             }
         }
     }
