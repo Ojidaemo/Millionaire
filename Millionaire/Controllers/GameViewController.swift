@@ -15,6 +15,15 @@ class GameViewController: UIViewController {
 
     }
     
-
-
+    @IBAction func takeMoneyPressed(_ sender: UIButton) {
+        
+        dismiss(animated: true)
+        
+    }
+    
+    @IBAction func chooseAnswerPressed(_ sender: UIButton) {
+        
+        
+    }
+    
 }
