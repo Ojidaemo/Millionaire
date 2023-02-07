@@ -15,13 +15,38 @@ class QuestionsViewController: UIViewController {
     var quiz = QuizBrain()
     
 
-    @IBOutlet weak var thirdQuestion: UIImageView!
     @IBOutlet weak var firstQuestion: UIImageView!
-    
     @IBOutlet weak var secondQuestion: UIImageView!
+   
+    @IBOutlet weak var thirdQuestion: UIImageView!
+    
+    @IBOutlet weak var fourthQuestion: UIImageView!
+    
+    @IBOutlet weak var fifthQuestion: UIImageView!
+    
+    @IBOutlet weak var sixthQuestion: UIImageView!
+    
+    @IBOutlet weak var seventhQuestion: UIImageView!
+    
+    @IBOutlet weak var eighthQuestion: UIImageView!
+    
+    @IBOutlet weak var ninthQuestion: UIImageView!
+    
+    @IBOutlet weak var tenthQuestion: UIImageView!
+    
+    @IBOutlet weak var eleventhQuestion: UIImageView!
+    
+    @IBOutlet weak var twelfthQuestion: UIImageView!
+    
+    @IBOutlet weak var thirteenthQuestion: UIImageView!
+    
+    @IBOutlet weak var fourteenthQuestion: UIImageView!
+    
+    @IBOutlet weak var fifteenthQuestion: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        questionsArray = [ firstQuestion, secondQuestion, thirdQuestion ]
+        questionsArray = [ firstQuestion, secondQuestion, thirdQuestion, fourthQuestion, fifthQuestion, sixthQuestion, seventhQuestion, eighthQuestion, ninthQuestion, tenthQuestion, eleventhQuestion, twelfthQuestion, thirteenthQuestion, fourteenthQuestion, fifteenthQuestion ]
 
         print(status)
         for i in 0..<questionsArray.count {
@@ -35,7 +60,13 @@ class QuestionsViewController: UIViewController {
             }
         }
     }
-     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.destination is GameViewController {
+            let gameVC = segue.destination as? GameViewController
+            gameVC?.num  = numOfQuestion
+            print("num vc",gameVC?.num)
+        }
+    }
     @IBAction func backToGame(_ sender: Any) {
         quiz.nextQuestion()
     }
