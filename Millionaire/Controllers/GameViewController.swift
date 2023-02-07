@@ -21,18 +21,15 @@ class GameViewController: UIViewController {
     @IBOutlet weak var thirdAnswerButton: UIButton!
     @IBOutlet weak var fourthAnswerButton: UIButton!
     var quiz = QuizBrain()
-    var answerStatus = "wrong"
     var answerButtons: [UIButton] = []
     var shuffledAnswers: [String] = []
+    var num = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        firstAnswerButton.setBackgroundImage(UIImage(named: "kk"), for: UIControl.State.normal)
-        
-        
         answerButtons = [firstAnswerButton, secondAnswerButton, thirdAnswerButton, fourthAnswerButton]
         updateUI()
+        
         
     }
     
@@ -42,28 +39,29 @@ class GameViewController: UIViewController {
         let userGotItRight = quiz.checkAnswer(userAnswer)
         
         if userGotItRight {
-            answerStatus = "right"
-            sender.backgroundColor = UIColor.green
+            quiz.answerStatus = "right"
             print("right")
             
         } else {
-            answerStatus = "wrong"
-            sender.backgroundColor = UIColor.red
+            quiz.answerStatus = "wrong"
             print("wrong")
         }
         quiz.nextQuestion()
+        num = quiz.questionNumber
         updateUI()
-     
+        
     }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.destination is QuestionsViewController {
-            let vc = segue.destination as? QuestionsViewController
-            vc?.numOfQuestion = quiz.questionNumber
-            vc?.status = answerStatus
+            let questionsVC = segue.destination as? QuestionsViewController
+            questionsVC?.numOfQuestion = quiz.questionNumber
+            questionsVC?.status = quiz.answerStatus
         }
     }
     
     func updateUI() {
+        quiz.questionNumber = num
         winMoney.text = "\(quiz.winMoney) RUB"
         numOfQuestion.text = "Вопрос: \(quiz.questionNumber+1)"
         currentQuestion.text = quiz.currentQuestion
