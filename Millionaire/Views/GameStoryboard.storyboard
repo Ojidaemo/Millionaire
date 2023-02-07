@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -31,7 +31,8 @@
                                             <backgroundConfiguration key="background" image="Rectangle blue"/>
                                         </buttonConfiguration>
                                         <connections>
-                                            <segue destination="vXn-FJ-Fn7" kind="show" id="mIZ-Lm-4TX"/>
+                                            <action selector="answerButtonPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Uak-3F-Fxh"/>
+                                            <segue destination="vXn-FJ-Fn7" kind="presentation" modalPresentationStyle="fullScreen" id="mIZ-Lm-4TX"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oDF-8O-HvQ">
@@ -42,8 +43,9 @@
                                             <backgroundConfiguration key="background" image="Rectangle blue"/>
                                         </buttonConfiguration>
                                         <connections>
+                                            <action selector="answerButtonPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Hzs-YA-fSI"/>
                                             <action selector="chooseAnswerPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="gTX-Rk-ipg"/>
-                                            <segue destination="vXn-FJ-Fn7" kind="show" id="0b0-li-rWn"/>
+                                            <segue destination="vXn-FJ-Fn7" kind="presentation" modalPresentationStyle="fullScreen" id="0b0-li-rWn"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y1B-h2-TH8">
@@ -54,7 +56,8 @@
                                             <backgroundConfiguration key="background" image="Rectangle blue"/>
                                         </buttonConfiguration>
                                         <connections>
-                                            <segue destination="vXn-FJ-Fn7" kind="show" id="JOk-77-b6h"/>
+                                            <action selector="answerButtonPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="CVg-hd-rmg"/>
+                                            <segue destination="vXn-FJ-Fn7" kind="presentation" modalPresentationStyle="fullScreen" id="JOk-77-b6h"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jES-wd-5je">
@@ -65,7 +68,8 @@
                                             <backgroundConfiguration key="background" image="Rectangle blue"/>
                                         </buttonConfiguration>
                                         <connections>
-                                            <segue destination="vXn-FJ-Fn7" kind="show" id="b6X-aw-mxh"/>
+                                            <action selector="answerButtonPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="PX6-zo-qhZ"/>
+                                            <segue destination="vXn-FJ-Fn7" kind="presentation" modalPresentationStyle="fullScreen" id="b6X-aw-mxh"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -193,6 +197,15 @@
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="8b3-F4-9de" secondAttribute="bottom" constant="20" id="yOd-31-VeM"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="currentQuestion" destination="Cdh-qF-0MK" id="esx-zn-NTu"/>
+                        <outlet property="firstAnswerButton" destination="jNJ-yU-tSF" id="LL0-Hk-NBw"/>
+                        <outlet property="fourthAnswerButton" destination="jES-wd-5je" id="3Ym-RD-Gwv"/>
+                        <outlet property="numOfQuestion" destination="7R4-lQ-a9y" id="sa3-Lm-2AV"/>
+                        <outlet property="secondAnswerButton" destination="oDF-8O-HvQ" id="P7j-Cv-Qou"/>
+                        <outlet property="thirdAnswerButton" destination="y1B-h2-TH8" id="2zh-OQ-pNg"/>
+                        <outlet property="winMoney" destination="e9n-be-djI" id="0FR-2W-2ug"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -201,16 +214,16 @@
         <!--Questions-->
         <scene sceneID="Hh1-Ku-8s5">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="r13-oN-ZTc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewControllerPlaceholder storyboardName="QuestionsStoryboard" referencedIdentifier="Questions" id="vXn-FJ-Fn7" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="vmB-OF-Hfj"/>
                 </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="r13-oN-ZTc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="608" y="25"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="b6X-aw-mxh"/>
+        <segue reference="mIZ-Lm-4TX"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Group 28" width="105" height="81"/>

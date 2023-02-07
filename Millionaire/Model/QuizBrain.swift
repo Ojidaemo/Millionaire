@@ -12,7 +12,9 @@ struct QuizBrain {
     
     var questionNumber: Int = 0
     
-    
+    var winMoney: String {
+        quiz[questionNumber].winMoney
+    }
     var currentQuestion: String {
         quiz[questionNumber].ask
     }
@@ -24,6 +26,12 @@ struct QuizBrain {
             reset()
         }
         //questionNumber = (questionNumber < quiz.count - 1) ? questionNumber + 1 : 0
+    }
+    
+    var currentAnswers: [String] {
+        var result = quiz[questionNumber].wrongAnswers
+        result.append(quiz[questionNumber].correctAnswer)
+        return result
     }
     
     func checkAnswer(_ answer: String) -> Bool {
