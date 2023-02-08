@@ -65,6 +65,7 @@ class QuestionsViewController: UIViewController {
         for i in 0..<questionsArray.count {
             if numOfQuestion - 1 == i && status == "right" && i != 4 && i != 9 && i != 14 {
                 winLabel.isHidden = false
+                goGameButton.isHidden = false
                 winLabel.text = "Ваш выигрыш составляет \n\(winMoney)"
                 questionsArray[i].image = UIImage(named: "RectangleGreen.png")
                 // add sound + show button with basic text
@@ -74,6 +75,8 @@ class QuestionsViewController: UIViewController {
             }
             else if numOfQuestion - 1 == i && status == "wrong" && i != 4 && i != 9 && i != 14 {
                 winLabel.isHidden = false
+                goGameButton.isHidden = false
+                goGameButton.titleLabel?.text = "Начать заново"
                 winLabel.text = "Ваш выигрыш составляет \n\(fireproofWin)"
                 questionsArray[i].image = UIImage(named: "Rectangle red")
                 
@@ -99,7 +102,7 @@ class QuestionsViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.destination is GameViewController {
             let gameVC = segue.destination as? GameViewController
-            if buttonBackToGame.currentTitle == "Коснитесь, чтобы продолжить..." {
+            if goGameButton.currentTitle == "Продолжить игру" {
                 gameVC?.num  = numOfQuestion
                 print("num vc",gameVC?.num)
             } else {
