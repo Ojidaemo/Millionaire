@@ -186,11 +186,7 @@
                     </view>
                     <connections>
                         <outlet property="currentQuestion" destination="Cdh-qF-0MK" id="esx-zn-NTu"/>
-                        <outlet property="firstAnswerButton" destination="jNJ-yU-tSF" id="LL0-Hk-NBw"/>
-                        <outlet property="fourthAnswerButton" destination="jES-wd-5je" id="3Ym-RD-Gwv"/>
                         <outlet property="numOfQuestion" destination="7R4-lQ-a9y" id="sa3-Lm-2AV"/>
-                        <outlet property="secondAnswerButton" destination="oDF-8O-HvQ" id="P7j-Cv-Qou"/>
-                        <outlet property="thirdAnswerButton" destination="y1B-h2-TH8" id="2zh-OQ-pNg"/>
                         <outlet property="timerLabel" destination="nI6-9f-rkW" id="LJe-lY-uIc"/>
                         <outlet property="winMoney" destination="e9n-be-djI" id="0FR-2W-2ug"/>
                         <outletCollection property="answerButtons" destination="jNJ-yU-tSF" collectionClass="NSMutableArray" id="gN9-5I-Hde"/>
