@@ -10,6 +10,7 @@
 		7CA52A8B299248E7001D9FE5 /* GameStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7CA52A8A299248E7001D9FE5 /* GameStoryboard.storyboard */; };
 		7CA52A8D299248EE001D9FE5 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CA52A8C299248EE001D9FE5 /* GameViewController.swift */; };
 		87708B96299176A4009A4EE5 /* RulesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87708B95299176A4009A4EE5 /* RulesViewController.swift */; };
+		877F8C1629937BEF00ED3C5F /* AudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 877F8C1529937BEF00ED3C5F /* AudioPlayer.swift */; };
 		8791031C2990FD6D00E6CE83 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8791031B2990FD6D00E6CE83 /* AppDelegate.swift */; };
 		8791031E2990FD6D00E6CE83 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8791031D2990FD6D00E6CE83 /* SceneDelegate.swift */; };
 		879103202990FD6D00E6CE83 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8791031F2990FD6D00E6CE83 /* ViewController.swift */; };
@@ -18,7 +19,7 @@
 		8791033A2990FF7A00E6CE83 /* wrongAnswer.wav in Resources */ = {isa = PBXBuildFile; fileRef = 879103352990FF7900E6CE83 /* wrongAnswer.wav */; };
 		8791033B2990FF7A00E6CE83 /* win.wav in Resources */ = {isa = PBXBuildFile; fileRef = 879103362990FF7900E6CE83 /* win.wav */; };
 		8791033C2990FF7A00E6CE83 /* answerAccepted.wav in Resources */ = {isa = PBXBuildFile; fileRef = 879103372990FF7A00E6CE83 /* answerAccepted.wav */; };
-		8791033D2990FF7A00E6CE83 /* timer.mp3.wav in Resources */ = {isa = PBXBuildFile; fileRef = 879103382990FF7A00E6CE83 /* timer.mp3.wav */; };
+		8791033D2990FF7A00E6CE83 /* timer.wav in Resources */ = {isa = PBXBuildFile; fileRef = 879103382990FF7A00E6CE83 /* timer.wav */; };
 		87BE26832991049900BAFB28 /* RulesStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87BE26822991049900BAFB28 /* RulesStoryboard.storyboard */; };
 		C632C0CE299158A7005E66ED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C632C0CD299158A7005E66ED /* Main.storyboard */; };
 		C632C0D029915A0A005E66ED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C632C0CF29915A0A005E66ED /* LaunchScreen.storyboard */; };
@@ -35,6 +36,7 @@
 		7CA52A8A299248E7001D9FE5 /* GameStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = GameStoryboard.storyboard; sourceTree = "<group>"; };
 		7CA52A8C299248EE001D9FE5 /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		87708B95299176A4009A4EE5 /* RulesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulesViewController.swift; sourceTree = "<group>"; };
+		877F8C1529937BEF00ED3C5F /* AudioPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayer.swift; sourceTree = "<group>"; };
 		879103182990FD6D00E6CE83 /* Millionaire.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Millionaire.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8791031B2990FD6D00E6CE83 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8791031D2990FD6D00E6CE83 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -45,7 +47,7 @@
 		879103352990FF7900E6CE83 /* wrongAnswer.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = wrongAnswer.wav; sourceTree = "<group>"; };
 		879103362990FF7900E6CE83 /* win.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = win.wav; sourceTree = "<group>"; };
 		879103372990FF7A00E6CE83 /* answerAccepted.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = answerAccepted.wav; sourceTree = "<group>"; };
-		879103382990FF7A00E6CE83 /* timer.mp3.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = timer.mp3.wav; sourceTree = "<group>"; };
+		879103382990FF7A00E6CE83 /* timer.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = timer.wav; sourceTree = "<group>"; };
 		87BE26822991049900BAFB28 /* RulesStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = RulesStoryboard.storyboard; sourceTree = "<group>"; };
 		C632C0CD299158A7005E66ED /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		C632C0CF29915A0A005E66ED /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -139,6 +141,7 @@
 				FC3CEB9F299248D3008FFC5A /* Question.swift */,
 				FC3CEB9E299248D3008FFC5A /* QuizBrain.swift */,
 				FC3CEB9B299248BC008FFC5A /* questions.json */,
+				877F8C1529937BEF00ED3C5F /* AudioPlayer.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -148,7 +151,7 @@
 			children = (
 				879103372990FF7A00E6CE83 /* answerAccepted.wav */,
 				879103342990FF7900E6CE83 /* correctAnswer.wav */,
-				879103382990FF7A00E6CE83 /* timer.mp3.wav */,
+				879103382990FF7A00E6CE83 /* timer.wav */,
 				879103362990FF7900E6CE83 /* win.wav */,
 				879103352990FF7900E6CE83 /* wrongAnswer.wav */,
 			);
@@ -213,7 +216,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8791033D2990FF7A00E6CE83 /* timer.mp3.wav in Resources */,
+				8791033D2990FF7A00E6CE83 /* timer.wav in Resources */,
 				8791033C2990FF7A00E6CE83 /* answerAccepted.wav in Resources */,
 				879103252990FD6E00E6CE83 /* Assets.xcassets in Resources */,
 				87BE26832991049900BAFB28 /* RulesStoryboard.storyboard in Resources */,
@@ -243,6 +246,7 @@
 				FCCA7D38299154D1004E460B /* QuestionsViewController.swift in Sources */,
 				8791031C2990FD6D00E6CE83 /* AppDelegate.swift in Sources */,
 				7CA52A8D299248EE001D9FE5 /* GameViewController.swift in Sources */,
+				877F8C1629937BEF00ED3C5F /* AudioPlayer.swift in Sources */,
 				8791031E2990FD6D00E6CE83 /* SceneDelegate.swift in Sources */,
 				ED825D362992D1060035D4BE /* EndGameViewController.swift in Sources */,
 			);

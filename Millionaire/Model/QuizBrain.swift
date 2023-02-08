@@ -8,6 +8,7 @@
 import Foundation
 
 struct QuizBrain {
+    
     let quiz = Question.questions()
     
     var questionNumber: Int = 0
