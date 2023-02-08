@@ -21,6 +21,7 @@ class GameViewController: UIViewController {
     
     @IBOutlet weak var thirdAnswerButton: UIButton!
     @IBOutlet weak var fourthAnswerButton: UIButton!
+    var audioPlayer = AudioPlayer()
     var quiz = QuizBrain()
     var answerButtons: [UIButton] = []
     var shuffledAnswers: [String] = []
@@ -30,6 +31,7 @@ class GameViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        audioPlayer.playSound(soundName: "timer")
         answerButtons = [firstAnswerButton, secondAnswerButton, thirdAnswerButton, fourthAnswerButton]
         updateUI()
         callTimer()
@@ -45,11 +47,11 @@ class GameViewController: UIViewController {
         // после выбора ответа надо убрать возможность нажимать на кнопки
         
         // подсветить выбранный вариант пока ждем перехода
-        // добавить музыку "answerAccepted"
 //        sender.isEnabled = true
 //        sender.setTitleColor(.yellow, for: .normal)
         
         sender.setBackgroundImage(UIImage(named: "Rectangle yellow"), for: .normal)
+        audioPlayer.playSound(soundName: "answerAccepted")
         
         Timer.scheduledTimer(withTimeInterval: 5, repeats: false) { timer in
             
@@ -64,6 +66,7 @@ class GameViewController: UIViewController {
             self.quiz.nextQuestion()
             self.num = self.quiz.questionNumber
             self.updateUI()
+            self.audioPlayer.player.stop()
             self.performSegue(withIdentifier: "goToQuestions", sender: self)
             
         }

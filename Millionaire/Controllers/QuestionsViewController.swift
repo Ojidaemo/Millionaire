@@ -44,18 +44,25 @@ class QuestionsViewController: UIViewController {
     
     @IBOutlet weak var fifteenthQuestion: UIImageView!
     
+    var audioPlayer = AudioPlayer()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        
         questionsArray = [ firstQuestion, secondQuestion, thirdQuestion, fourthQuestion, fifthQuestion, sixthQuestion, seventhQuestion, eighthQuestion, ninthQuestion, tenthQuestion, eleventhQuestion, twelfthQuestion, thirteenthQuestion, fourteenthQuestion, fifteenthQuestion ]
 
         print(status)
         for i in 0..<questionsArray.count {
             if numOfQuestion - 1 == i && status == "right" && i != 4 && i != 9 && i != 14 {
                 questionsArray[i].image = UIImage(named: "RectangleGreen.png")
+                audioPlayer.playSound(soundName: "correctAnswer")
                 //questionsArray[i].backgroundColor = .green
             }
             else if numOfQuestion - 1 == i && status == "wrong" && i != 4 && i != 9 && i != 14 {
                 questionsArray[i].image = UIImage(named: "Rectangle red")
+                audioPlayer.playSound(soundName: "wrongAnswer")
                 //questionsArray[i].backgroundColor = .red
             }
         }
