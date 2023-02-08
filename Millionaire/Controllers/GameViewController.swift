@@ -84,7 +84,19 @@ class GameViewController: UIViewController {
             questionsVC?.numOfQuestion = quiz.questionNumber
             questionsVC?.status = quiz.answerStatus
             quiz.questionNumber -= 1
-            questionsVC?.winMoney = quiz.winMoney
+            print("====", quiz.questionNumber)
+            //print("----",quiz.winMoney)
+            if quiz.questionNumber != -1 {
+                questionsVC?.winMoney = quiz.winMoney
+            } else {
+                questionsVC?.timeOff = 0
+            }
+            if quiz.questionNumber >= 4 &&  quiz.questionNumber < 9 {
+                questionsVC?.fireproofWin = "1000"
+                print("5555555")
+            } else if quiz.questionNumber >= 9 {
+                questionsVC?.fireproofWin = "32000"
+            }
             quiz.questionNumber += 1
     
         }
