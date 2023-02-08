@@ -34,7 +34,6 @@ class GameViewController: UIViewController {
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         
-        timer.invalidate()
         audioPlayer.player?.stop()
     }
     
@@ -70,7 +69,6 @@ class GameViewController: UIViewController {
         // подсветить выбранный вариант пока ждем перехода + музыка
         
         sender.setBackgroundImage(UIImage(named: "Rectangle yellow"), for: .normal)
-        audioPlayer.player?.stop()
         audioPlayer.playSound(soundName: "answerAccepted")
         
         // таймер для задержки перехода
