@@ -45,7 +45,8 @@ class GameViewController: UIViewController {
         let userAnswer = sender.currentTitle!
         let userGotItRight = quiz.checkAnswer(userAnswer)
         
-        // после выбора ответа надо убрать возможность нажимать на кнопки
+        //TODO: после выбора ответа надо убрать возможность нажимать на кнопки
+        
         
         // подсветить выбранный вариант пока ждем перехода + музыка
         
@@ -72,6 +73,8 @@ class GameViewController: UIViewController {
             self.performSegue(withIdentifier: "goToQuestions", sender: self)
             
         }
+        
+        //
     }
     
     
@@ -97,6 +100,8 @@ class GameViewController: UIViewController {
             }
         }
     }
+    
+    // Timer and some UI changes based on the timer's logic
     
     func callTimer() {
         

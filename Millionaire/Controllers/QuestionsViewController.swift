@@ -52,6 +52,7 @@ class QuestionsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
         buttonBackToGame.isHidden = true
         
         questionsArray = [ firstQuestion, secondQuestion, thirdQuestion, fourthQuestion, fifthQuestion, sixthQuestion, seventhQuestion, eighthQuestion, ninthQuestion, tenthQuestion, eleventhQuestion, twelfthQuestion, thirteenthQuestion, fourteenthQuestion, fifteenthQuestion ]
@@ -61,12 +62,16 @@ class QuestionsViewController: UIViewController {
         for i in 0..<questionsArray.count {
             if numOfQuestion - 1 == i && status == "right" && i != 4 && i != 9 && i != 14 {
                 questionsArray[i].image = UIImage(named: "RectangleGreen.png")
+                
+                // add sound + show button with basic text
                 audioPlayer.playSound(soundName: "correctAnswer")
                 buttonBackToGame.isHidden = false
                 //questionsArray[i].backgroundColor = .green
             }
             else if numOfQuestion - 1 == i && status == "wrong" && i != 4 && i != 9 && i != 14 {
                 questionsArray[i].image = UIImage(named: "Rectangle red")
+                
+                // add sound + change button's title
                 audioPlayer.playSound(soundName: "wrongAnswer")
                 buttonBackToGame.setTitle("Начать заново", for: .normal)
                 buttonBackToGame.isHidden = false
@@ -89,8 +94,7 @@ class QuestionsViewController: UIViewController {
         if sender.currentTitle == "Коснитесь, чтобы продолжить..." {
             quiz.nextQuestion()
         } else {
-            quiz.reset()
-            // start from the beginning
+        //TODO: the game should start from the beginning
             
         }
 
