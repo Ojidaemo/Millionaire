@@ -12,7 +12,6 @@ struct AudioPlayer {
     
     var player: AVAudioPlayer!
     
-    
     mutating func playSound(soundName: String) {
         
         let url = Bundle.main.url(forResource: soundName, withExtension: "wav")
@@ -20,5 +19,4 @@ struct AudioPlayer {
         player.play()
         
     }
-    
 }
