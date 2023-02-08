@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -186,13 +186,13 @@
                     </view>
                     <connections>
                         <outlet property="currentQuestion" destination="Cdh-qF-0MK" id="esx-zn-NTu"/>
-                        <outlet property="firstAnswerButton" destination="jNJ-yU-tSF" id="LL0-Hk-NBw"/>
-                        <outlet property="fourthAnswerButton" destination="jES-wd-5je" id="3Ym-RD-Gwv"/>
                         <outlet property="numOfQuestion" destination="7R4-lQ-a9y" id="sa3-Lm-2AV"/>
-                        <outlet property="secondAnswerButton" destination="oDF-8O-HvQ" id="P7j-Cv-Qou"/>
-                        <outlet property="thirdAnswerButton" destination="y1B-h2-TH8" id="2zh-OQ-pNg"/>
                         <outlet property="timerLabel" destination="nI6-9f-rkW" id="LJe-lY-uIc"/>
                         <outlet property="winMoney" destination="e9n-be-djI" id="0FR-2W-2ug"/>
+                        <outletCollection property="answerButtons" destination="jNJ-yU-tSF" collectionClass="NSMutableArray" id="gN9-5I-Hde"/>
+                        <outletCollection property="answerButtons" destination="oDF-8O-HvQ" collectionClass="NSMutableArray" id="DEV-Oi-sAX"/>
+                        <outletCollection property="answerButtons" destination="y1B-h2-TH8" collectionClass="NSMutableArray" id="qqu-3d-uuQ"/>
+                        <outletCollection property="answerButtons" destination="jES-wd-5je" collectionClass="NSMutableArray" id="xpL-hM-cUM"/>
                         <segue destination="vXn-FJ-Fn7" kind="presentation" identifier="goToQuestions" modalPresentationStyle="fullScreen" id="aFI-I2-p62"/>
                     </connections>
                 </viewController>

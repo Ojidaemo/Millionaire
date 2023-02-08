@@ -13,23 +13,14 @@ class GameViewController: UIViewController {
     @IBOutlet weak var winMoney: UILabel!
     @IBOutlet weak var numOfQuestion: UILabel!
     @IBOutlet weak var currentQuestion: UILabel!
-    
     @IBOutlet weak var timerLabel: UILabel!
-    
-    @IBOutlet weak var firstAnswerButton: UIButton!
-    
-    @IBOutlet weak var secondAnswerButton: UIButton!
-    
-    @IBOutlet weak var thirdAnswerButton: UIButton!
-    @IBOutlet weak var fourthAnswerButton: UIButton!
-    
-    var audioPlayer = AudioPlayer()
-    var quiz = QuizBrain()
-    var answerButtons: [UIButton] = []
+    @IBOutlet var answerButtons: [UIButton]!
     var shuffledAnswers: [String] = []
     var num = 0
-    var timer = Timer()
     var secondRemaining = 30 // needs to be changed to 30 sec
+    var timer = Timer()
+    var audioPlayer = AudioPlayer()
+    var quiz = QuizBrain()
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
@@ -41,7 +32,6 @@ class GameViewController: UIViewController {
         super.viewDidLoad()
         
         audioPlayer.playSound(soundName: "timer")
-        answerButtons = [firstAnswerButton, secondAnswerButton, thirdAnswerButton, fourthAnswerButton]
         updateUI()
         callTimer()
         
@@ -51,48 +41,35 @@ class GameViewController: UIViewController {
         
         let userAnswer = sender.currentTitle!
         let userGotItRight = quiz.checkAnswer(userAnswer)
-        
         // остановить таймер
-        
         timer.invalidate()
         
         //после выбора ответа убираем возможность нажимать на кнопки
-        
-        firstAnswerButton.isEnabled = false
-        secondAnswerButton.isEnabled = false
-        thirdAnswerButton.isEnabled = false
-        fourthAnswerButton.isEnabled = false
-        
+        for button in answerButtons {
+            button.isEnabled = false
+        }
         sender.self.isEnabled = true
-        sender.self.isEnabled = false
+        sender.self.isUserInteractionEnabled = false
+        
         
         // подсветить выбранный вариант пока ждем перехода + музыка
-        
         sender.setBackgroundImage(UIImage(named: "Rectangle yellow"), for: .normal)
         audioPlayer.playSound(soundName: "answerAccepted")
         
         // таймер для задержки перехода
-        
         Timer.scheduledTimer(withTimeInterval: 2, repeats: false) { timer in
             
             if userGotItRight {
                 self.quiz.answerStatus = "right"
-                print("right")
-                
             } else {
                 self.quiz.answerStatus = "wrong"
-                print("wrong")
             }
-            
             self.quiz.nextQuestion()
             self.num = self.quiz.questionNumber
             self.updateUI()
             self.audioPlayer.player.stop()
             self.performSegue(withIdentifier: "goToQuestions", sender: self)
-            
         }
-        
-        //
     }
     
     
@@ -102,8 +79,6 @@ class GameViewController: UIViewController {
             questionsVC?.numOfQuestion = quiz.questionNumber
             questionsVC?.status = quiz.answerStatus
             quiz.questionNumber -= 1
-            print("====", quiz.questionNumber)
-            //print("----",quiz.winMoney)
             if quiz.questionNumber != -1 {
                 questionsVC?.winMoney = quiz.winMoney
             } else {
@@ -111,12 +86,10 @@ class GameViewController: UIViewController {
             }
             if quiz.questionNumber >= 4 &&  quiz.questionNumber < 9 {
                 questionsVC?.fireproofWin = "1000"
-                print("5555555")
             } else if quiz.questionNumber >= 9 {
                 questionsVC?.fireproofWin = "32000"
             }
             quiz.questionNumber += 1
-    
         }
     }
     
@@ -135,7 +108,6 @@ class GameViewController: UIViewController {
     }
     
     // Timer and some UI changes based on the timer's logic
-    
     func callTimer() {
         
         timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { timer in
@@ -156,9 +128,6 @@ class GameViewController: UIViewController {
     }
     
     @IBAction func takeMoneyPressed(_ sender: UIButton) {
-        
         dismiss(animated: true)
-        
     }
-    
 }
