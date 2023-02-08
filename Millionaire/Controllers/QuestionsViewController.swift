@@ -13,8 +13,11 @@ class QuestionsViewController: UIViewController {
     var status = ""
     var questionsArray: [UIImageView] = []
     var quiz = QuizBrain()
+    var winMoney = ""
     
 
+    @IBOutlet weak var buttonBackToGame: UIButton!
+    
     @IBOutlet weak var firstQuestion: UIImageView!
     @IBOutlet weak var secondQuestion: UIImageView!
    
@@ -49,24 +52,29 @@ class QuestionsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
+        buttonBackToGame.isHidden = true
         
         questionsArray = [ firstQuestion, secondQuestion, thirdQuestion, fourthQuestion, fifthQuestion, sixthQuestion, seventhQuestion, eighthQuestion, ninthQuestion, tenthQuestion, eleventhQuestion, twelfthQuestion, thirteenthQuestion, fourteenthQuestion, fifteenthQuestion ]
 
         print(status)
+        
         for i in 0..<questionsArray.count {
             if numOfQuestion - 1 == i && status == "right" && i != 4 && i != 9 && i != 14 {
                 questionsArray[i].image = UIImage(named: "RectangleGreen.png")
                 audioPlayer.playSound(soundName: "correctAnswer")
+                buttonBackToGame.isHidden = false
                 //questionsArray[i].backgroundColor = .green
             }
             else if numOfQuestion - 1 == i && status == "wrong" && i != 4 && i != 9 && i != 14 {
                 questionsArray[i].image = UIImage(named: "Rectangle red")
                 audioPlayer.playSound(soundName: "wrongAnswer")
+                buttonBackToGame.setTitle("Начать заново", for: .normal)
+                buttonBackToGame.isHidden = false
                 //questionsArray[i].backgroundColor = .red
             }
         }
     }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.destination is GameViewController {
             let gameVC = segue.destination as? GameViewController
@@ -74,7 +82,18 @@ class QuestionsViewController: UIViewController {
             print("num vc",gameVC?.num)
         }
     }
-    @IBAction func backToGame(_ sender: Any) {
-        quiz.nextQuestion()
+    
+ 
+    @IBAction func backToGamePressed(_ sender: UIButton) {
+        
+        if sender.currentTitle == "Коснитесь, чтобы продолжить..." {
+            quiz.nextQuestion()
+        } else {
+            quiz.reset()
+            // start from the beginning
+            
+        }
+
     }
+    
 }
