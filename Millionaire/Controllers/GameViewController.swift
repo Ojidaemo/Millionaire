@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 class GameViewController: UIViewController {
     
@@ -30,6 +31,13 @@ class GameViewController: UIViewController {
     var timer = Timer()
     var secondRemaining = 30 // needs to be changed to 30 sec
     
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        timer.invalidate()
+        audioPlayer.player?.stop()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -45,12 +53,24 @@ class GameViewController: UIViewController {
         let userAnswer = sender.currentTitle!
         let userGotItRight = quiz.checkAnswer(userAnswer)
         
-        //TODO: после выбора ответа надо убрать возможность нажимать на кнопки
+        // остановить таймер
         
+        timer.invalidate()
+        
+        //после выбора ответа убираем возможность нажимать на кнопки
+        
+        firstAnswerButton.isEnabled = false
+        secondAnswerButton.isEnabled = false
+        thirdAnswerButton.isEnabled = false
+        fourthAnswerButton.isEnabled = false
+        
+        sender.self.isEnabled = true
+        sender.self.isEnabled = false
         
         // подсветить выбранный вариант пока ждем перехода + музыка
         
         sender.setBackgroundImage(UIImage(named: "Rectangle yellow"), for: .normal)
+        audioPlayer.player?.stop()
         audioPlayer.playSound(soundName: "answerAccepted")
         
         // таймер для задержки перехода
@@ -120,7 +140,7 @@ class GameViewController: UIViewController {
     
     func callTimer() {
         
-        Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { timer in
+        timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { timer in
             if self.secondRemaining > 0 {
                 self.secondRemaining -= 1
                 self.timerLabel.text = "\(self.secondRemaining)"

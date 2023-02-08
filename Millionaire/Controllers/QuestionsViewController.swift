@@ -55,6 +55,13 @@ class QuestionsViewController: UIViewController {
     
     @IBOutlet weak var goGameButton: UIButton!
     
+    // stop music from playing
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        audioPlayer.player?.stop()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
