@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -20,56 +20,43 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="emptyBack" translatesAutoresizingMaskIntoConstraints="NO" id="jcH-SC-WlD">
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                             </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="1fO-ax-Kej">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="1fO-ax-Kej">
                                 <rect key="frame" x="20" y="327.33333333333331" width="353" height="197.33333333333331"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jNJ-yU-tSF">
                                         <rect key="frame" x="0.0" y="0.0" width="353" height="34.333333333333336"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="А                                                     1956      ">
-                                            <backgroundConfiguration key="background" image="Rectangle blue"/>
-                                        </buttonConfiguration>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="А                                                     1956      " backgroundImage="Rectangle blue"/>
                                         <connections>
                                             <action selector="answerButtonPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Uak-3F-Fxh"/>
-                                            <segue destination="vXn-FJ-Fn7" kind="presentation" modalPresentationStyle="fullScreen" id="mIZ-Lm-4TX"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oDF-8O-HvQ">
                                         <rect key="frame" x="0.0" y="54.333333333333371" width="353" height="34.333333333333343"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Б                                                    1956      ">
-                                            <backgroundConfiguration key="background" image="Rectangle blue"/>
-                                        </buttonConfiguration>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Б                                                    1956      " backgroundImage="Rectangle blue"/>
                                         <connections>
                                             <action selector="answerButtonPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Hzs-YA-fSI"/>
-                                            <action selector="chooseAnswerPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="gTX-Rk-ipg"/>
-                                            <segue destination="vXn-FJ-Fn7" kind="presentation" modalPresentationStyle="fullScreen" id="0b0-li-rWn"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y1B-h2-TH8">
                                         <rect key="frame" x="0.0" y="108.66666666666669" width="353" height="34.333333333333343"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="В                                                     1956      ">
-                                            <backgroundConfiguration key="background" image="Rectangle blue"/>
-                                        </buttonConfiguration>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="В                                                     1956      " backgroundImage="Rectangle blue"/>
                                         <connections>
                                             <action selector="answerButtonPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="CVg-hd-rmg"/>
-                                            <segue destination="vXn-FJ-Fn7" kind="presentation" modalPresentationStyle="fullScreen" id="JOk-77-b6h"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jES-wd-5je">
+                                    <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jES-wd-5je">
                                         <rect key="frame" x="0.0" y="163" width="353" height="34.333333333333343"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Г                                                     1956      ">
-                                            <backgroundConfiguration key="background" image="Rectangle blue"/>
-                                        </buttonConfiguration>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Г                                                     1956      " backgroundImage="Rectangle blue"/>
                                         <connections>
                                             <action selector="answerButtonPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="PX6-zo-qhZ"/>
-                                            <segue destination="vXn-FJ-Fn7" kind="presentation" modalPresentationStyle="fullScreen" id="b6X-aw-mxh"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -125,7 +112,7 @@
                                     <action selector="takeMoneyPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="2z7-Uw-VnL"/>
                                 </connections>
                             </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="56" translatesAutoresizingMaskIntoConstraints="NO" id="7Dx-53-9UB">
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="7Dx-53-9UB">
                                 <rect key="frame" x="10" y="204" width="373" height="50"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Вопрос:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7R4-lQ-a9y">
@@ -139,13 +126,13 @@
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="60" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nI6-9f-rkW">
-                                        <rect key="frame" x="156" y="0.0" width="61" height="50"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nI6-9f-rkW">
+                                        <rect key="frame" x="110" y="0.0" width="153" height="50"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="500РУБ" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e9n-be-djI">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="500" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e9n-be-djI">
                                         <rect key="frame" x="273" y="0.0" width="100" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="GUS-Dg-40B"/>
@@ -204,7 +191,9 @@
                         <outlet property="numOfQuestion" destination="7R4-lQ-a9y" id="sa3-Lm-2AV"/>
                         <outlet property="secondAnswerButton" destination="oDF-8O-HvQ" id="P7j-Cv-Qou"/>
                         <outlet property="thirdAnswerButton" destination="y1B-h2-TH8" id="2zh-OQ-pNg"/>
+                        <outlet property="timerLabel" destination="nI6-9f-rkW" id="LJe-lY-uIc"/>
                         <outlet property="winMoney" destination="e9n-be-djI" id="0FR-2W-2ug"/>
+                        <segue destination="vXn-FJ-Fn7" kind="presentation" identifier="goToQuestions" modalPresentationStyle="fullScreen" id="aFI-I2-p62"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -222,9 +211,6 @@
             <point key="canvasLocation" x="608" y="25"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="mIZ-Lm-4TX"/>
-    </inferredMetricsTieBreakers>
     <resources>
         <image name="Group 28" width="105" height="81"/>
         <image name="Group 29" width="105" height="85"/>
