@@ -83,6 +83,9 @@ class GameViewController: UIViewController {
             let questionsVC = segue.destination as? QuestionsViewController
             questionsVC?.numOfQuestion = quiz.questionNumber
             questionsVC?.status = quiz.answerStatus
+            quiz.questionNumber -= 1
+            questionsVC?.winMoney = quiz.winMoney
+            quiz.questionNumber += 1
     
         }
     }
