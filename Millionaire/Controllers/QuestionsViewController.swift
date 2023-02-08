@@ -11,6 +11,7 @@ class QuestionsViewController: UIViewController {
     var timer = Timer()
     var numOfQuestion = 0
     var status = ""
+    var timeOff = 10
     var questionsArray: [UIImageView] = []
     var quiz = QuizBrain()
     var winMoney = ""
@@ -57,7 +58,7 @@ class QuestionsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
+        print("time", timeOff)
         buttonBackToGame.isHidden = true
         
         questionsArray = [ firstQuestion, secondQuestion, thirdQuestion, fourthQuestion, fifthQuestion, sixthQuestion, seventhQuestion, eighthQuestion, ninthQuestion, tenthQuestion, eleventhQuestion, twelfthQuestion, thirteenthQuestion, fourteenthQuestion, fifteenthQuestion ]
@@ -65,7 +66,7 @@ class QuestionsViewController: UIViewController {
         print(status)
         
         for i in 0..<questionsArray.count {
-            if numOfQuestion - 1 == i && status == "right" && i != 4 && i != 9 && i != 14 {
+            if numOfQuestion - 1 == i && status == "right" {
                 Timer.scheduledTimer(withTimeInterval: 3, repeats: false) { timer in
                     UIView.animate(withDuration: 0.4) {
                         self.winLabel.isHidden = false
@@ -78,7 +79,7 @@ class QuestionsViewController: UIViewController {
                 // add sound + show button with basic text
                 audioPlayer.playSound(soundName: "correctAnswer")
             }
-            else if numOfQuestion - 1 == i && status == "wrong" && i != 4 && i != 9 && i != 14 {
+            else if numOfQuestion - 1 == i && status == "wrong" {
                 print("11", fireproofWin)
                 Timer.scheduledTimer(withTimeInterval: 3, repeats: false) { timer in
                     UIView.animate(withDuration: 0.4) {
@@ -118,6 +119,17 @@ class QuestionsViewController: UIViewController {
                     }
                 }
                 audioPlayer.playSound(soundName: "correctAnswer")
+            } else if timeOff == 0 {
+                audioPlayer.playSound(soundName: "wrongAnswer")
+                Timer.scheduledTimer(withTimeInterval: 3, repeats: false) { timer in
+                    UIView.animate(withDuration: 0.4) {
+                        self.winLabel.isHidden = false
+                        self.goGameButton.isHidden = false
+                        self.blurView.alpha = 0.8
+                        self.goGameButton.setTitle("Начать заново", for: .normal)
+                        self.winLabel.text = "Ваш выигрыш составляет \n\(self.fireproofWin)"
+                    }
+                }
             }
         }
     }
@@ -138,13 +150,6 @@ class QuestionsViewController: UIViewController {
     
     
     @IBAction func backToGamePressed(_ sender: UIButton) {
-        
-        //        if sender.currentTitle == "Коснитесь, чтобы продолжить..." {
-        //            quiz.nextQuestion()
-        //        } else {
-        //        //TODO: the game should start from the beginning
-        //
-        //        }
         
     }
     
