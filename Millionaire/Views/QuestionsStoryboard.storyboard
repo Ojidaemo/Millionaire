@@ -100,7 +100,6 @@
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="backToGamePressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="RGw-rn-0RJ"/>
-                                    <segue destination="UHI-FB-6GT" kind="presentation" identifier="goToGame" modalPresentationStyle="fullScreen" id="fQH-8v-puB"/>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rectangle blue" translatesAutoresizingMaskIntoConstraints="NO" id="dAY-Mu-zcF">
@@ -452,6 +451,15 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <visualEffectView opaque="NO" alpha="0.0" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="3b3-Qr-aud">
+                                <rect key="frame" x="-47" y="0.0" width="462" height="844"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="vEy-gK-tK8">
+                                    <rect key="frame" x="0.0" y="0.0" width="462" height="844"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                </view>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <blurEffect style="dark"/>
+                            </visualEffectView>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ваш выигрыш составляет              " textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9cU-PM-Sya">
                                 <rect key="frame" x="40" y="376" width="309" height="24"/>
                                 <constraints>
@@ -471,6 +479,9 @@
                                 <buttonConfiguration key="configuration" style="plain" title="Продолжить игру">
                                     <fontDescription key="titleFontDescription" type="boldSystem" pointSize="20"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <segue destination="UHI-FB-6GT" kind="presentation" modalPresentationStyle="fullScreen" id="gk3-MM-RLR"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
@@ -484,6 +495,7 @@
                             <constraint firstItem="boY-TU-2H7" firstAttribute="leading" secondItem="faI-OJ-nZh" secondAttribute="trailing" constant="89" id="0rI-0g-dh1"/>
                             <constraint firstItem="vKT-04-oX2" firstAttribute="top" secondItem="HYl-jh-Bl6" secondAttribute="bottom" constant="12.33" id="2Cz-m2-RUZ"/>
                             <constraint firstItem="IX9-m2-zfH" firstAttribute="top" secondItem="bqe-xP-jKJ" secondAttribute="bottom" constant="12.33" id="2OE-ev-qqv"/>
+                            <constraint firstAttribute="trailing" secondItem="3b3-Qr-aud" secondAttribute="trailing" constant="-25" id="2es-4b-asU"/>
                             <constraint firstItem="iWB-GZ-MOa" firstAttribute="top" secondItem="Dgu-8k-T18" secondAttribute="bottom" constant="12.33" id="2fh-ii-6tS"/>
                             <constraint firstItem="9cU-PM-Sya" firstAttribute="top" secondItem="bqe-xP-jKJ" secondAttribute="bottom" constant="1.3300000000000001" id="2yy-3u-hHm"/>
                             <constraint firstItem="YX4-lM-ygF" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="63" id="3Ol-st-2CG"/>
@@ -512,10 +524,12 @@
                             <constraint firstItem="zAE-FW-CV4" firstAttribute="top" secondItem="wC2-pF-l9M" secondAttribute="bottom" constant="12.33" id="EJj-YH-TA2"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="R6K-E7-UGQ" secondAttribute="trailing" constant="66" id="Ea1-8q-V74"/>
                             <constraint firstItem="IX9-m2-zfH" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="63" id="EaM-S4-spz"/>
+                            <constraint firstItem="3b3-Qr-aud" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" constant="-47" id="HpP-bG-bYh"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="7d5-6u-6t8" secondAttribute="trailing" constant="66" id="J0q-e8-9GW"/>
                             <constraint firstItem="8p6-2p-FH2" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="35" id="JUQ-Gu-8tl"/>
                             <constraint firstItem="4sh-VV-qDO" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="35" id="KXz-u8-Hog"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="IxS-Jq-9ed" secondAttribute="trailing" constant="237" id="KkW-EN-Y9c"/>
+                            <constraint firstItem="3b3-Qr-aud" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="KzW-Je-P6b"/>
                             <constraint firstItem="Elu-Kp-G4t" firstAttribute="top" secondItem="KxX-GX-KcD" secondAttribute="bottom" constant="12.33" id="LKf-Us-TeX"/>
                             <constraint firstItem="34i-Ph-Uvb" firstAttribute="leading" secondItem="Fg0-VD-Dih" secondAttribute="trailing" constant="66" id="Lsy-Op-FLl"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="NIq-xH-Ieb" secondAttribute="trailing" constant="98" id="LwR-kc-6Oa"/>
@@ -560,6 +574,7 @@
                             <constraint firstItem="TVY-xM-iwZ" firstAttribute="leading" secondItem="hAI-fd-j8D" secondAttribute="trailing" constant="86" id="Zc8-5R-UE1"/>
                             <constraint firstItem="iR5-DD-eF4" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="35" id="aRy-YF-GVu"/>
                             <constraint firstItem="7d5-6u-6t8" firstAttribute="leading" secondItem="IX9-m2-zfH" secondAttribute="trailing" constant="77" id="aXB-W0-R5S"/>
+                            <constraint firstAttribute="bottom" secondItem="3b3-Qr-aud" secondAttribute="bottom" id="amX-wJ-qkB"/>
                             <constraint firstItem="let-p6-KmR" firstAttribute="top" secondItem="erd-Hx-Im5" secondAttribute="bottom" constant="12.33" id="avA-kF-geB"/>
                             <constraint firstItem="IxS-Jq-9ed" firstAttribute="top" secondItem="erd-Hx-Im5" secondAttribute="bottom" constant="12.33" id="b6D-2T-8OO"/>
                             <constraint firstItem="erd-Hx-Im5" firstAttribute="top" secondItem="Dgu-8k-T18" secondAttribute="bottom" constant="8" id="bxv-n7-qwy"/>
@@ -617,6 +632,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="blurView" destination="3b3-Qr-aud" id="Dnf-ti-pfd"/>
                         <outlet property="buttonBackToGame" destination="c4k-Ta-nyD" id="tnU-1J-Fdw"/>
                         <outlet property="eighthQuestion" destination="fPs-Fg-ktZ" id="WLN-hC-FM6"/>
                         <outlet property="eleventhQuestion" destination="t63-fe-WYz" id="yLm-kx-1py"/>
