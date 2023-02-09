@@ -23,29 +23,15 @@ class GameViewController: UIViewController {
     var timer = Timer()
     var audioPlayer = AudioPlayer()
     var quiz = QuizBrain()
-    var takeMoney = false
-    
+    var takeMoneyPressed = false
+        
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
-        
-        print(" view did disappear")
         audioPlayer.player.stop()
-        
     }
-    
-//    override func viewWillDisappear(_ animated: Bool) {
-//        super.viewWillDisappear(animated)
-//
-//        audioPlayer.player.stop()
-//    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        print("questionnumber \(num)")
-        print("\(quiz.winMoney) RUB")
-        print("\(quiz.currentQuestion)")
-        
         
         // by default interaction with moneyButton is disabled since player cannot withdraw anything until he provides correct answers to the first question
         
@@ -63,6 +49,7 @@ class GameViewController: UIViewController {
                 
         let userAnswer = sender.currentTitle!
         let userGotItRight = quiz.checkAnswer(userAnswer)
+        
         // остановить таймер
         timer.invalidate()
         
@@ -99,7 +86,7 @@ class GameViewController: UIViewController {
             let questionsVC = segue.destination as? QuestionsViewController
             questionsVC?.numOfQuestion = quiz.questionNumber
             questionsVC?.status = quiz.answerStatus
-            questionsVC?.takeMoney = takeMoney
+            questionsVC?.takeMoney = takeMoneyPressed
             quiz.questionNumber -= 1
             if quiz.questionNumber != -1 {
                 questionsVC?.winMoney = quiz.winMoney
@@ -155,8 +142,7 @@ class GameViewController: UIViewController {
         timer.invalidate()
         
         // we present data on the next screen based on this bool value
-        
-        takeMoney = true
+        takeMoneyPressed = true
         
         self.performSegue(withIdentifier: "goToQuestions", sender: self)
     }

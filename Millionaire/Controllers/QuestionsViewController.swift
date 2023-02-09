@@ -26,18 +26,15 @@ class QuestionsViewController: UIViewController {
     
     // stop music from playing
     
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
         audioPlayer.player.stop()
-        print("player 1 stop")
     }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         updateUI()
-        
     }
     
     func updateUI() {
