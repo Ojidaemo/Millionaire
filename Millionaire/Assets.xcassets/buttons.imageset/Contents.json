@@ -1,11 +1,11 @@
 {
   "images" : [
     {
-      "filename" : "buttons.pdf",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "buttons.pdf",
       "idiom" : "universal",
       "scale" : "2x"
     },
