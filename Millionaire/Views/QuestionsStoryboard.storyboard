@@ -274,29 +274,41 @@
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="vEy-gK-tK8">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ваш выигрыш составляет              " textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uhT-Tk-F5m">
+                                            <rect key="frame" x="52.5" y="436" width="309" height="24"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="309" id="0Io-tK-6u9"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2PR-Pq-Pr2">
+                                            <rect key="frame" x="107.5" y="560" width="199" height="38"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="38" id="w3I-bE-BvG"/>
+                                            </constraints>
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <state key="normal" title="Button"/>
+                                            <buttonConfiguration key="configuration" style="plain" title="Продолжить игру">
+                                                <fontDescription key="titleFontDescription" type="boldSystem" pointSize="20"/>
+                                            </buttonConfiguration>
+                                            <connections>
+                                                <segue destination="UHI-FB-6GT" kind="presentation" modalPresentationStyle="fullScreen" id="Pao-cf-8q4"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="2PR-Pq-Pr2" firstAttribute="centerX" secondItem="vEy-gK-tK8" secondAttribute="centerX" id="D89-Mb-wCj"/>
+                                        <constraint firstItem="uhT-Tk-F5m" firstAttribute="centerY" secondItem="vEy-gK-tK8" secondAttribute="centerY" id="DSD-cd-270"/>
+                                        <constraint firstItem="uhT-Tk-F5m" firstAttribute="centerX" secondItem="vEy-gK-tK8" secondAttribute="centerX" id="Qr3-OP-r9H"/>
+                                        <constraint firstItem="2PR-Pq-Pr2" firstAttribute="top" secondItem="uhT-Tk-F5m" secondAttribute="bottom" constant="100" id="fen-6q-wah"/>
+                                    </constraints>
                                 </view>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <blurEffect style="dark"/>
                             </visualEffectView>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ваш выигрыш составляет              " textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9cU-PM-Sya">
-                                <rect key="frame" x="40" y="377" width="309" height="24"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NIq-xH-Ieb">
-                                <rect key="frame" x="93" y="546" width="223" height="38"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Продолжить игру">
-                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="20"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <segue destination="UHI-FB-6GT" kind="presentation" modalPresentationStyle="fullScreen" id="gk3-MM-RLR"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -315,23 +327,23 @@
                     </view>
                     <connections>
                         <outlet property="blurView" destination="3b3-Qr-aud" id="Dnf-ti-pfd"/>
-                        <outlet property="goGameButton" destination="NIq-xH-Ieb" id="rOF-oo-LfQ"/>
-                        <outlet property="winLabel" destination="9cU-PM-Sya" id="22e-PW-JeR"/>
-                        <outletCollection property="questionsArray" destination="dAY-Mu-zcF" collectionClass="NSMutableArray" id="uqR-1Q-rN3"/>
-                        <outletCollection property="questionsArray" destination="8p6-2p-FH2" collectionClass="NSMutableArray" id="5n9-f7-xQY"/>
-                        <outletCollection property="questionsArray" destination="Dgu-8k-T18" collectionClass="NSMutableArray" id="3lY-eq-qoS"/>
-                        <outletCollection property="questionsArray" destination="erd-Hx-Im5" collectionClass="NSMutableArray" id="IFT-Yx-yWB"/>
-                        <outletCollection property="questionsArray" destination="t63-fe-WYz" collectionClass="NSMutableArray" id="l81-wd-Cji"/>
-                        <outletCollection property="questionsArray" destination="bqe-xP-jKJ" collectionClass="NSMutableArray" id="c2n-87-oXA"/>
-                        <outletCollection property="questionsArray" destination="4sh-VV-qDO" collectionClass="NSMutableArray" id="ldq-4M-V23"/>
-                        <outletCollection property="questionsArray" destination="fPs-Fg-ktZ" collectionClass="NSMutableArray" id="RAW-hd-OIs"/>
-                        <outletCollection property="questionsArray" destination="KxX-GX-KcD" collectionClass="NSMutableArray" id="k1a-DM-8O8"/>
-                        <outletCollection property="questionsArray" destination="iR5-DD-eF4" collectionClass="NSMutableArray" id="WXX-kN-mjv"/>
-                        <outletCollection property="questionsArray" destination="HYl-jh-Bl6" collectionClass="NSMutableArray" id="eD2-aT-oOJ"/>
-                        <outletCollection property="questionsArray" destination="0Kj-fb-5Mp" collectionClass="NSMutableArray" id="bvU-MF-YBn"/>
-                        <outletCollection property="questionsArray" destination="wC2-pF-l9M" collectionClass="NSMutableArray" id="ke4-tP-YFD"/>
-                        <outletCollection property="questionsArray" destination="F1a-E4-sA0" collectionClass="NSMutableArray" id="sx9-gy-wrj"/>
-                        <outletCollection property="questionsArray" destination="p9j-dL-3mD" collectionClass="NSMutableArray" id="GuV-Nj-Oq6"/>
+                        <outlet property="goGameButton" destination="2PR-Pq-Pr2" id="Hqb-74-yZC"/>
+                        <outlet property="winLabel" destination="uhT-Tk-F5m" id="i0H-Qq-FFy"/>
+                        <outletCollection property="questionsArray" destination="p9j-dL-3mD" collectionClass="NSMutableArray" id="iiK-H0-Dzb"/>
+                        <outletCollection property="questionsArray" destination="F1a-E4-sA0" collectionClass="NSMutableArray" id="lRe-7W-04z"/>
+                        <outletCollection property="questionsArray" destination="wC2-pF-l9M" collectionClass="NSMutableArray" id="5ti-r8-KRW"/>
+                        <outletCollection property="questionsArray" destination="0Kj-fb-5Mp" collectionClass="NSMutableArray" id="A9V-3p-0DJ"/>
+                        <outletCollection property="questionsArray" destination="HYl-jh-Bl6" collectionClass="NSMutableArray" id="iG8-zF-Pjj"/>
+                        <outletCollection property="questionsArray" destination="iR5-DD-eF4" collectionClass="NSMutableArray" id="t6K-iI-lqj"/>
+                        <outletCollection property="questionsArray" destination="KxX-GX-KcD" collectionClass="NSMutableArray" id="Ga2-Kb-qKT"/>
+                        <outletCollection property="questionsArray" destination="fPs-Fg-ktZ" collectionClass="NSMutableArray" id="PYd-4h-q2h"/>
+                        <outletCollection property="questionsArray" destination="4sh-VV-qDO" collectionClass="NSMutableArray" id="2hg-K5-5SC"/>
+                        <outletCollection property="questionsArray" destination="bqe-xP-jKJ" collectionClass="NSMutableArray" id="w4I-3z-3yS"/>
+                        <outletCollection property="questionsArray" destination="t63-fe-WYz" collectionClass="NSMutableArray" id="Vef-1w-eZ0"/>
+                        <outletCollection property="questionsArray" destination="erd-Hx-Im5" collectionClass="NSMutableArray" id="Gks-tO-iNd"/>
+                        <outletCollection property="questionsArray" destination="Dgu-8k-T18" collectionClass="NSMutableArray" id="CZH-DB-XOa"/>
+                        <outletCollection property="questionsArray" destination="8p6-2p-FH2" collectionClass="NSMutableArray" id="5EV-qX-Zt8"/>
+                        <outletCollection property="questionsArray" destination="dAY-Mu-zcF" collectionClass="NSMutableArray" id="ntr-ue-ZNH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
