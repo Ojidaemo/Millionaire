@@ -14,10 +14,11 @@ class QuestionsViewController: UIViewController {
     var timeOff = 10
     var winMoney = ""
     var fireproofWin = "0"
+    var takeMoney = false
     var timer = Timer()
     var quiz = QuizBrain()
     var audioPlayer = AudioPlayer()
-    var takeMoney = false
+  
     
     @IBOutlet weak var blurView: UIVisualEffectView!
     @IBOutlet var questionsArray: [UIImageView]!
@@ -46,13 +47,13 @@ class QuestionsViewController: UIViewController {
                     self.winLabel.isHidden = false
                     self.goGameButton.isHidden = false
                     self.blurView.alpha = 0.8
-                    self.goGameButton.setTitle("Начать заново", for: .normal)
+                    self.goGameButton.setTitle("Начать игру заново", for: .normal)
                     self.winLabel.text = "Ваш выигрыш составляет \n\(self.winMoney) RUB"
                 }
             }
         } else {
             for i in 0..<questionsArray.count {
-                if numOfQuestion - 1 == i && status == "right" {
+                if numOfQuestion - 1 == i && status == "right" && i != 14{
                     questionsArray[i].image = UIImage(named: "RectangleGreen.png")
                     audioPlayer.playSound(soundName: "correctAnswer")
                     Timer.scheduledTimer(withTimeInterval: 3, repeats: false) { timer in
@@ -64,7 +65,7 @@ class QuestionsViewController: UIViewController {
                         }
                     }
                 }
-                else if numOfQuestion - 1 == i && status == "wrong" {
+                else if numOfQuestion - 1 == i && status == "wrong" && i != 14{
                     questionsArray[i].image = UIImage(named: "Rectangle red")
                     audioPlayer.playSound(soundName: "wrongAnswer")
                     Timer.scheduledTimer(withTimeInterval: 3, repeats: false) { timer in
@@ -72,32 +73,34 @@ class QuestionsViewController: UIViewController {
                             self.winLabel.isHidden = false
                             self.goGameButton.isHidden = false
                             self.blurView.alpha = 0.8
-                            self.goGameButton.setTitle("Начать заново", for: .normal)
+                            self.goGameButton.setTitle("Начать игру заново", for: .normal)
                             self.winLabel.text = "Ваш выигрыш составляет \n\(self.fireproofWin) RUB"
                         }
                     }
                 }
-                else if numOfQuestion - 1 == 4 || numOfQuestion - 1 == 9 {
-                    fireproofWin = winMoney
-                    audioPlayer.playSound(soundName: "correctAnswer")
+                else if numOfQuestion == 15 && status == "right" {
+                    audioPlayer.playSound(soundName: "win")
+                    questionsArray[14].image = UIImage(named: "RectangleGreen.png")
                     Timer.scheduledTimer(withTimeInterval: 3, repeats: false) { timer in
                         UIView.animate(withDuration: 0.4) {
                             self.winLabel.isHidden = false
                             self.goGameButton.isHidden = false
                             self.blurView.alpha = 0.8
-                            self.winLabel.text = "Ваш выигрыш составляет \n\(self.winMoney) RUB"
+                            self.goGameButton.setTitle("Начать игру заново", for: .normal)
+                            self.winLabel.text = "Вы победили! \nВаш выигрыш составляет \n\(self.winMoney)"
                         }
                     }
                 }
-                else if numOfQuestion - 1 == 14 {
-                    audioPlayer.playSound(soundName: "correctAnswer")
+                else if numOfQuestion == 15 && status == "wrong" {
+                    questionsArray[14].image = UIImage(named: "Rectangle red")
+                    audioPlayer.playSound(soundName: "wrongAnswer")
                     Timer.scheduledTimer(withTimeInterval: 3, repeats: false) { timer in
                         UIView.animate(withDuration: 0.4) {
                             self.winLabel.isHidden = false
                             self.goGameButton.isHidden = false
                             self.blurView.alpha = 0.8
-                            self.goGameButton.setTitle("Начать заново", for: .normal)
-                            self.winLabel.text = "Вы победили! \nВаш выигрыш составляет \n\(self.winMoney)"
+                            self.goGameButton.setTitle("Начать игру заново", for: .normal)
+                            self.winLabel.text = "Ваш выигрыш составляет \n\(self.fireproofWin)"
                         }
                     }
                 }
@@ -108,7 +111,7 @@ class QuestionsViewController: UIViewController {
                             self.winLabel.isHidden = false
                             self.goGameButton.isHidden = false
                             self.blurView.alpha = 0.8
-                            self.goGameButton.setTitle("Начать заново", for: .normal)
+                            self.goGameButton.setTitle("Начать игру заново", for: .normal)
                             self.winLabel.text = "Ваш выигрыш составляет \n\(self.fireproofWin)"
                         }
                     }
@@ -116,17 +119,16 @@ class QuestionsViewController: UIViewController {
             }
         }
     }
-        
-        
-        override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-            if segue.destination is GameViewController {
-                let gameVC = segue.destination as? GameViewController
-                if goGameButton.currentTitle == "Продолжить игру" {
-                    gameVC?.num  = numOfQuestion
-                    print("num vc",gameVC?.num)
-                } else {
-                    gameVC?.num = 0
-                }
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.destination is GameViewController {
+            let gameVC = segue.destination as? GameViewController
+            if goGameButton.currentTitle == "Продолжить игру" {
+                gameVC?.num  = numOfQuestion
+            } else {
+                gameVC?.num = 0
             }
         }
+    }
 }
