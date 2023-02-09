@@ -10,7 +10,7 @@ import Foundation
 struct QuizBrain {
     
     let quiz = Question.questions()
-    var questionNumber: Int = 14
+    var questionNumber: Int = 12
     var answerStatus = "wrong"
     
     var winMoney: String {
@@ -22,12 +22,8 @@ struct QuizBrain {
     }
     
     mutating func nextQuestion() {
-        if questionNumber != quiz.count - 1 {
+        if questionNumber < quiz.count - 1 {
             questionNumber = questionNumber + 1
-        } else if questionNumber == quiz.count - 1 {
-            print("RAVNO")
-        } else {
-            reset()
         }
     }
     
@@ -43,9 +39,5 @@ struct QuizBrain {
         } else {
             return false
         }
-    }
-    
-    mutating func reset() {
-        questionNumber = 0
     }
 }

@@ -18,13 +18,14 @@ class GameViewController: UIViewController {
     @IBOutlet weak var moneyButton: UIButton!
     
     var shuffledAnswers: [String] = []
-    var num = 14
+    var num = 0
+    var takeMoneyPressed = false
     var secondRemaining = 30 // needs to be changed to 30 sec
     var timer = Timer()
     var audioPlayer = AudioPlayer()
     var quiz = QuizBrain()
-    var takeMoneyPressed = false
-        
+    
+    
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
         audioPlayer.player.stop()
@@ -33,12 +34,6 @@ class GameViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // by default interaction with moneyButton is disabled since player cannot withdraw anything until he provides correct answers to the first question
-        
-        if num > 0 {
-            moneyButton.isUserInteractionEnabled = true
-        }
-        
         audioPlayer.playSound(soundName: "timer")
         updateUI()
         callTimer()
@@ -46,7 +41,7 @@ class GameViewController: UIViewController {
     }
     
     @IBAction func answerButtonPressed(_ sender: UIButton) {
-                
+        
         let userAnswer = sender.currentTitle!
         let userGotItRight = quiz.checkAnswer(userAnswer)
         
@@ -73,26 +68,25 @@ class GameViewController: UIViewController {
             } else {
                 self.quiz.answerStatus = "wrong"
             }
-            if self.quiz.questionNumber != 14 {
-                self.quiz.nextQuestion()
-            }
-            self.num = self.quiz.questionNumber
-            self.updateUI()
+            self.quiz.nextQuestion()
             self.audioPlayer.player.stop()
             self.performSegue(withIdentifier: "goToQuestions", sender: self)
         }
     }
-        
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.destination is QuestionsViewController {
             let questionsVC = segue.destination as? QuestionsViewController
-            questionsVC?.numOfQuestion = quiz.questionNumber
+            if num != 14 {
+                questionsVC?.numOfQuestion = quiz.questionNumber
+            } else {
+                questionsVC?.numOfQuestion = 15
+            }
             questionsVC?.status = quiz.answerStatus
             questionsVC?.takeMoney = takeMoneyPressed
-            if quiz.questionNumber != 14 {
+            if num != 14 {
                 quiz.questionNumber -= 1
             }
-            print("number", quiz.questionNumber)
             if quiz.questionNumber != -1 {
                 questionsVC?.winMoney = quiz.winMoney
             } else {
@@ -102,9 +96,6 @@ class GameViewController: UIViewController {
                 questionsVC?.fireproofWin = "1000"
             } else if quiz.questionNumber >= 9 {
                 questionsVC?.fireproofWin = "32000"
-            }
-            if quiz.questionNumber != 14 {
-                quiz.questionNumber += 1
             }
         }
     }
@@ -120,6 +111,10 @@ class GameViewController: UIViewController {
             if index < shuffledAnswers.count {
                 button.setTitle(shuffledAnswers[index], for: .normal)
             }
+        }
+        // by default interaction with moneyButton is disabled since player cannot withdraw anything until he provides correct answers to the first question
+        if num > 0 {
+            moneyButton.isUserInteractionEnabled = true
         }
     }
     
@@ -144,7 +139,7 @@ class GameViewController: UIViewController {
     }
     
     @IBAction func takeMoneyPressed(_ sender: UIButton) {
- 
+        
         // остановить таймер
         timer.invalidate()
         
