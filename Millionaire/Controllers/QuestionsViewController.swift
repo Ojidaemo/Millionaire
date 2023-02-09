@@ -39,21 +39,22 @@ class QuestionsViewController: UIViewController {
     }
     
     func updateUI() {
-        
-        if takeMoney == true {
-            audioPlayer.playSound(soundName: "win")
-            Timer.scheduledTimer(withTimeInterval: 3, repeats: false) { timer in
-                UIView.animate(withDuration: 0.4) {
-                    self.winLabel.isHidden = false
-                    self.goGameButton.isHidden = false
-                    self.blurView.alpha = 0.8
-                    self.goGameButton.setTitle("Начать игру заново", for: .normal)
-                    self.winLabel.text = "Ваш выигрыш составляет \n\(self.winMoney) RUB"
-                }
-            }
-        } else {
+                
             for i in 0..<questionsArray.count {
-                if numOfQuestion - 1 == i && status == "right" && i != 14{
+                if takeMoney == true && numOfQuestion - 1 == i {
+                    audioPlayer.playSound(soundName: "win")
+                    questionsArray[i].image = UIImage(named: "Rectangle yellow")
+                    Timer.scheduledTimer(withTimeInterval: 3, repeats: false) { timer in
+                        UIView.animate(withDuration: 0.4) {
+                            self.winLabel.isHidden = false
+                            self.goGameButton.isHidden = false
+                            self.blurView.alpha = 0.8
+                            self.goGameButton.setTitle("Начать игру заново", for: .normal)
+                            self.winLabel.text = "Ваш выигрыш составляет \n\(self.winMoney) RUB"
+                        }
+                    }
+                }
+                else if numOfQuestion - 1 == i && status == "right" && i != 14{
                     questionsArray[i].image = UIImage(named: "RectangleGreen.png")
                     audioPlayer.playSound(soundName: "correctAnswer")
                     Timer.scheduledTimer(withTimeInterval: 3, repeats: false) { timer in
@@ -118,8 +119,7 @@ class QuestionsViewController: UIViewController {
                 }
             }
         }
-    }
-    
+
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.destination is GameViewController {
