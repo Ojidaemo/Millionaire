@@ -18,7 +18,7 @@ class GameViewController: UIViewController {
     @IBOutlet weak var moneyButton: UIButton!
     
     var shuffledAnswers: [String] = []
-    var num = 0
+    var num = 14
     var secondRemaining = 30 // needs to be changed to 30 sec
     var timer = Timer()
     var audioPlayer = AudioPlayer()
@@ -73,7 +73,9 @@ class GameViewController: UIViewController {
             } else {
                 self.quiz.answerStatus = "wrong"
             }
-            self.quiz.nextQuestion()
+            if self.quiz.questionNumber != 14 {
+                self.quiz.nextQuestion()
+            }
             self.num = self.quiz.questionNumber
             self.updateUI()
             self.audioPlayer.player.stop()
@@ -87,7 +89,10 @@ class GameViewController: UIViewController {
             questionsVC?.numOfQuestion = quiz.questionNumber
             questionsVC?.status = quiz.answerStatus
             questionsVC?.takeMoney = takeMoneyPressed
-            quiz.questionNumber -= 1
+            if quiz.questionNumber != 14 {
+                quiz.questionNumber -= 1
+            }
+            print("number", quiz.questionNumber)
             if quiz.questionNumber != -1 {
                 questionsVC?.winMoney = quiz.winMoney
             } else {
@@ -98,7 +103,9 @@ class GameViewController: UIViewController {
             } else if quiz.questionNumber >= 9 {
                 questionsVC?.fireproofWin = "32000"
             }
-            quiz.questionNumber += 1
+            if quiz.questionNumber != 14 {
+                quiz.questionNumber += 1
+            }
         }
     }
     

@@ -52,7 +52,7 @@ class QuestionsViewController: UIViewController {
             }
         } else {
             for i in 0..<questionsArray.count {
-                if numOfQuestion - 1 == i && status == "right" {
+                if numOfQuestion - 1 == i && status == "right" && i != 14{
                     questionsArray[i].image = UIImage(named: "RectangleGreen.png")
                     audioPlayer.playSound(soundName: "correctAnswer")
                     Timer.scheduledTimer(withTimeInterval: 3, repeats: false) { timer in
@@ -64,7 +64,7 @@ class QuestionsViewController: UIViewController {
                         }
                     }
                 }
-                else if numOfQuestion - 1 == i && status == "wrong" {
+                else if numOfQuestion - 1 == i && status == "wrong" && i != 14{
                     questionsArray[i].image = UIImage(named: "Rectangle red")
                     audioPlayer.playSound(soundName: "wrongAnswer")
                     Timer.scheduledTimer(withTimeInterval: 3, repeats: false) { timer in
@@ -77,20 +77,21 @@ class QuestionsViewController: UIViewController {
                         }
                     }
                 }
-                else if numOfQuestion - 1 == 4 || numOfQuestion - 1 == 9 {
-                    fireproofWin = winMoney
-                    audioPlayer.playSound(soundName: "correctAnswer")
-                    Timer.scheduledTimer(withTimeInterval: 3, repeats: false) { timer in
-                        UIView.animate(withDuration: 0.4) {
-                            self.winLabel.isHidden = false
-                            self.goGameButton.isHidden = false
-                            self.blurView.alpha = 0.8
-                            self.winLabel.text = "Ваш выигрыш составляет \n\(self.winMoney) RUB"
-                        }
-                    }
-                }
-                else if numOfQuestion - 1 == 14 {
-                    audioPlayer.playSound(soundName: "correctAnswer")
+//                else if numOfQuestion - 1 == 4 || numOfQuestion - 1 == 9  && status == "right" {
+//                    fireproofWin = winMoney
+//                    audioPlayer.playSound(soundName: "correctAnswer")
+//                    Timer.scheduledTimer(withTimeInterval: 3, repeats: false) { timer in
+//                        UIView.animate(withDuration: 0.4) {
+//                            self.winLabel.isHidden = false
+//                            self.goGameButton.isHidden = false
+//                            self.blurView.alpha = 0.8
+//                            self.winLabel.text = "Ваш выигрыш составляет \n\(self.winMoney) RUB"
+//                        }
+//                    }
+//                }
+                else if numOfQuestion - 1 == 14 && status == "right" {
+                    audioPlayer.playSound(soundName: "win")
+                    questionsArray[i].image = UIImage(named: "RectangleGreen.png")
                     Timer.scheduledTimer(withTimeInterval: 3, repeats: false) { timer in
                         UIView.animate(withDuration: 0.4) {
                             self.winLabel.isHidden = false
@@ -98,6 +99,19 @@ class QuestionsViewController: UIViewController {
                             self.blurView.alpha = 0.8
                             self.goGameButton.setTitle("Начать заново", for: .normal)
                             self.winLabel.text = "Вы победили! \nВаш выигрыш составляет \n\(self.winMoney)"
+                        }
+                    }
+                }
+                else if numOfQuestion - 1 == 14 && status == "wrong" {
+                    questionsArray[i].image = UIImage(named: "Rectangle red")
+                    audioPlayer.playSound(soundName: "wrongAnswer")
+                    Timer.scheduledTimer(withTimeInterval: 3, repeats: false) { timer in
+                        UIView.animate(withDuration: 0.4) {
+                            self.winLabel.isHidden = false
+                            self.goGameButton.isHidden = false
+                            self.blurView.alpha = 0.8
+                            self.goGameButton.setTitle("Начать заново", for: .normal)
+                            self.winLabel.text = "Ваш выигрыш составляет \n\(self.winMoney)"
                         }
                     }
                 }
