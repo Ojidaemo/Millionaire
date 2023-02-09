@@ -15,21 +15,43 @@ class GameViewController: UIViewController {
     @IBOutlet weak var currentQuestion: UILabel!
     @IBOutlet weak var timerLabel: UILabel!
     @IBOutlet var answerButtons: [UIButton]!
+    @IBOutlet weak var moneyButton: UIButton!
+    
     var shuffledAnswers: [String] = []
     var num = 0
     var secondRemaining = 30 // needs to be changed to 30 sec
     var timer = Timer()
     var audioPlayer = AudioPlayer()
     var quiz = QuizBrain()
+    var takeMoney = false
     
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
         
-        audioPlayer.player?.stop()
+        print(" view did disappear")
+        audioPlayer.player.stop()
+        
     }
+    
+//    override func viewWillDisappear(_ animated: Bool) {
+//        super.viewWillDisappear(animated)
+//
+//        audioPlayer.player.stop()
+//    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        print("questionnumber \(num)")
+        print("\(quiz.winMoney) RUB")
+        print("\(quiz.currentQuestion)")
+        
+        
+        // by default interaction with moneyButton is disabled since player cannot withdraw anything until he provides correct answers to the first question
+        
+        if num > 0 {
+            moneyButton.isUserInteractionEnabled = true
+        }
         
         audioPlayer.playSound(soundName: "timer")
         updateUI()
@@ -38,7 +60,7 @@ class GameViewController: UIViewController {
     }
     
     @IBAction func answerButtonPressed(_ sender: UIButton) {
-        
+                
         let userAnswer = sender.currentTitle!
         let userGotItRight = quiz.checkAnswer(userAnswer)
         // остановить таймер
@@ -71,13 +93,13 @@ class GameViewController: UIViewController {
             self.performSegue(withIdentifier: "goToQuestions", sender: self)
         }
     }
-    
-    
+        
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.destination is QuestionsViewController {
             let questionsVC = segue.destination as? QuestionsViewController
             questionsVC?.numOfQuestion = quiz.questionNumber
             questionsVC?.status = quiz.answerStatus
+            questionsVC?.takeMoney = takeMoney
             quiz.questionNumber -= 1
             if quiz.questionNumber != -1 {
                 questionsVC?.winMoney = quiz.winMoney
@@ -128,6 +150,14 @@ class GameViewController: UIViewController {
     }
     
     @IBAction func takeMoneyPressed(_ sender: UIButton) {
-        dismiss(animated: true)
+ 
+        // остановить таймер
+        timer.invalidate()
+        
+        // we present data on the next screen based on this bool value
+        
+        takeMoney = true
+        
+        self.performSegue(withIdentifier: "goToQuestions", sender: self)
     }
 }
