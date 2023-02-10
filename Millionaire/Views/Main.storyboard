@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
-    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
@@ -14,64 +14,95 @@
             <objects>
                 <viewController id="Y6W-OH-hqX" customClass="ViewController" customModule="Millionaire" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="emptyBack" translatesAutoresizingMaskIntoConstraints="NO" id="KEK-61-Yyn">
-                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NvB-c2-6HC">
-                                <rect key="frame" x="16" y="583" width="361" height="87"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="ПРАВИЛА ИГРЫ" backgroundImage="buttons"/>
-                                <connections>
-                                    <action selector="rulesButtonPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="xWW-NK-xUo"/>
-                                    <segue destination="ovO-L3-pU8" kind="presentation" modalPresentationStyle="fullScreen" id="8kv-Dw-Vvc"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Добро пожаловать в ИГРУ" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iY9-dG-hF6">
-                                <rect key="frame" x="16" y="394" width="361" height="170"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Добро пожаловать в ИГРУ" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iY9-dG-hF6">
+                                <rect key="frame" x="10" y="380" width="394" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <color key="textColor" systemColor="systemYellowColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e6h-Lp-vTe">
-                                <rect key="frame" x="16" y="678" width="361" height="87"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="НОВАЯ ИГРА" backgroundImage="buttons"/>
-                                <connections>
-                                    <action selector="newGameButtonPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="hLB-G0-Nwp"/>
-                                    <segue destination="lTg-dA-fCc" kind="presentation" modalPresentationStyle="fullScreen" id="SyY-Kz-geF"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="dr6-aO-n87">
+                                <rect key="frame" x="40" y="512" width="334" height="320"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e6h-Lp-vTe">
+                                        <rect key="frame" x="0.0" y="0.0" width="334" height="100"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="НОВАЯ ИГРА" backgroundImage="buttons"/>
+                                        <connections>
+                                            <action selector="newGameButtonPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="hLB-G0-Nwp"/>
+                                            <segue destination="lTg-dA-fCc" kind="presentation" modalPresentationStyle="fullScreen" id="SyY-Kz-geF"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NvB-c2-6HC">
+                                        <rect key="frame" x="0.0" y="110" width="334" height="100"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="ПРАВИЛА ИГРЫ" backgroundImage="buttons"/>
+                                        <connections>
+                                            <action selector="rulesButtonPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="xWW-NK-xUo"/>
+                                            <segue destination="ovO-L3-pU8" kind="presentation" modalPresentationStyle="fullScreen" id="8kv-Dw-Vvc"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U5v-gQ-bzY">
+                                        <rect key="frame" x="0.0" y="220" width="334" height="100"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="РЕЗУЛЬТАТЫ" backgroundImage="buttons"/>
+                                        <connections>
+                                            <action selector="newGameButtonPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="CBm-mK-4DK"/>
+                                            <action selector="resultsPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="WEO-qW-xy7"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="i1E-dd-7zw">
-                                <rect key="frame" x="53" y="59" width="286" height="327"/>
+                                <rect key="frame" x="53" y="48" width="307" height="327"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="327" id="8UF-wJ-JiJ"/>
-                                    <constraint firstAttribute="width" constant="286" id="hTe-G7-PE8"/>
                                 </constraints>
                             </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Введите никнейм для сохранения результатов" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Ny4-rJ-q6p">
+                                <rect key="frame" x="75" y="454" width="264" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" textContentType="nickname"/>
+                                <connections>
+                                    <action selector="nicknamePressed:" destination="Y6W-OH-hqX" eventType="editingDidEnd" id="v39-bW-Cre"/>
+                                </connections>
+                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <constraints>
                             <constraint firstItem="KEK-61-Yyn" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="32T-GL-oHS"/>
                             <constraint firstAttribute="bottom" secondItem="KEK-61-Yyn" secondAttribute="bottom" id="3eo-jN-bhx"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="i1E-dd-7zw" secondAttribute="bottom" constant="432" id="3pr-V6-MpZ"/>
                             <constraint firstAttribute="right" secondItem="KEK-61-Yyn" secondAttribute="right" id="AW2-gb-1Y7"/>
                             <constraint firstItem="i1E-dd-7zw" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="SL2-jQ-Vh9"/>
+                            <constraint firstItem="iY9-dG-hF6" firstAttribute="top" secondItem="i1E-dd-7zw" secondAttribute="bottom" constant="5" id="U9O-km-ehE"/>
                             <constraint firstItem="i1E-dd-7zw" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="53" id="WeU-tT-snO"/>
+                            <constraint firstItem="dr6-aO-n87" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="40" id="WqV-El-Nzy"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="i1E-dd-7zw" secondAttribute="trailing" constant="54" id="aAh-2L-3fQ"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="dr6-aO-n87" secondAttribute="trailing" constant="40" id="c6R-wS-fY9"/>
+                            <constraint firstItem="Ny4-rJ-q6p" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="75" id="ckM-7q-2TU"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="dr6-aO-n87" secondAttribute="bottom" constant="30" id="hwM-Zc-TLR"/>
+                            <constraint firstItem="Ny4-rJ-q6p" firstAttribute="top" secondItem="iY9-dG-hF6" secondAttribute="bottom" constant="44" id="nZR-wN-SnO"/>
+                            <constraint firstItem="iY9-dG-hF6" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="10" id="oD5-5j-Nlu"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Ny4-rJ-q6p" secondAttribute="trailing" constant="75" id="piq-mu-qF6"/>
                             <constraint firstItem="KEK-61-Yyn" firstAttribute="left" secondItem="5EZ-qb-Rvc" secondAttribute="left" id="qM0-Kp-sYZ"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="iY9-dG-hF6" secondAttribute="trailing" constant="10" id="uQS-PB-ref"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="7nj-Zb-hhJ"/>
+                    <connections>
+                        <outlet property="nicknameField" destination="Ny4-rJ-q6p" id="mbY-ji-nYQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
