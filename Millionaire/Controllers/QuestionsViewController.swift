@@ -10,6 +10,7 @@ import UIKit
 class QuestionsViewController: UIViewController {
     
     var numOfQuestion = 0
+    var fiftyHint = false
     var status = ""
     var timeOff = 10
     var winMoney = ""
@@ -66,7 +67,7 @@ class QuestionsViewController: UIViewController {
                         }
                     }
                 }
-                else if numOfQuestion - 1 == i && status == "wrong" && i != 14{
+                else if numOfQuestion - 1 == i && status == "wrong" && i != 14 && timeOff != 0{
                     questionsArray[i].image = UIImage(named: "Rectangle red")
                     audioPlayer.playSound(soundName: "wrongAnswer")
                     Timer.scheduledTimer(withTimeInterval: 3, repeats: false) { timer in
@@ -126,6 +127,7 @@ class QuestionsViewController: UIViewController {
             let gameVC = segue.destination as? GameViewController
             if goGameButton.currentTitle == "Продолжить игру" {
                 gameVC?.num  = numOfQuestion
+                gameVC?.fiftyHintPressed = fiftyHint
             } else {
                 gameVC?.num = 0
             }
