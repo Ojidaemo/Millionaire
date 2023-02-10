@@ -8,6 +8,7 @@
 import UIKit
 
 class ResultsTableViewController: UITableViewController {
+    
     var results = [Result]()
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,6 +22,10 @@ print(results)
         self.tableView.backgroundView = imageView
     }
 
+    
+    @IBAction func returnToMenu(_ sender: Any) {
+        dismiss(animated: true)
+    }
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
