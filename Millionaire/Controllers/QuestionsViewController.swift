@@ -19,6 +19,7 @@ class QuestionsViewController: UIViewController {
     var timer = Timer()
     var quiz = QuizBrain()
     var audioPlayer = AudioPlayer()
+    var result = Result(name: "h", winMoney: "345")
   
     
     @IBOutlet weak var blurView: UIVisualEffectView!
@@ -64,6 +65,7 @@ class QuestionsViewController: UIViewController {
                             self.blurView.alpha = 0.8
                             self.goGameButton.setTitle("Начать игру заново", for: .normal)
                             self.winLabel.text = "Ваш выигрыш составляет \n\(self.winMoney) RUB"
+                            self.result.winMoney = self.winMoney
                         }
                     }
                 }
@@ -89,6 +91,7 @@ class QuestionsViewController: UIViewController {
                             self.blurView.alpha = 0.8
                             self.goGameButton.setTitle("Начать игру заново", for: .normal)
                             self.winLabel.text = "Ваш выигрыш составляет \n\(self.fireproofWin) RUB"
+                            self.result.winMoney = self.fireproofWin
                         }
                     }
                 }
@@ -102,6 +105,7 @@ class QuestionsViewController: UIViewController {
                             self.blurView.alpha = 0.8
                             self.goGameButton.setTitle("Начать игру заново", for: .normal)
                             self.winLabel.text = "Вы победили! \nВаш выигрыш составляет \n\(self.winMoney)"
+                            self.result.winMoney = self.winMoney
                         }
                     }
                 }
@@ -115,6 +119,7 @@ class QuestionsViewController: UIViewController {
                             self.blurView.alpha = 0.8
                             self.goGameButton.setTitle("Начать игру заново", for: .normal)
                             self.winLabel.text = "Ваш выигрыш составляет \n\(self.fireproofWin)"
+                            self.result.winMoney = self.fireproofWin
                         }
                     }
                 }
@@ -127,6 +132,7 @@ class QuestionsViewController: UIViewController {
                             self.blurView.alpha = 0.8
                             self.goGameButton.setTitle("Начать игру заново", for: .normal)
                             self.winLabel.text = "Ваш выигрыш составляет \n\(self.fireproofWin)"
+                            self.result.winMoney = self.fireproofWin
                         }
                     }
                 }
@@ -144,6 +150,10 @@ class QuestionsViewController: UIViewController {
                 gameVC?.num = 0
                 
             }
+        } else if segue.identifier == "goToMain"{
+            let mainVC = segue.destination as? ViewController
+            mainVC?.result.winMoney = result.winMoney
+            mainVC?.status = true
         }
     }
 }
