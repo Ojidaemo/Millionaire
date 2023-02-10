@@ -26,8 +26,8 @@
                                 <color key="textColor" systemColor="systemYellowColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="dr6-aO-n87">
-                                <rect key="frame" x="40" y="518" width="334" height="300"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="dr6-aO-n87">
+                                <rect key="frame" x="40" y="512" width="334" height="320"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e6h-Lp-vTe">
                                         <rect key="frame" x="0.0" y="0.0" width="334" height="100"/>
@@ -41,7 +41,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NvB-c2-6HC">
-                                        <rect key="frame" x="0.0" y="100" width="334" height="100"/>
+                                        <rect key="frame" x="0.0" y="110" width="334" height="100"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -52,7 +52,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U5v-gQ-bzY">
-                                        <rect key="frame" x="0.0" y="200" width="334" height="100"/>
+                                        <rect key="frame" x="0.0" y="220" width="334" height="100"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -70,9 +70,9 @@
                                     <constraint firstAttribute="height" constant="327" id="8UF-wJ-JiJ"/>
                                 </constraints>
                             </imageView>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Введите никнейм для сохранения результатов" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Ny4-rJ-q6p">
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Введите никнейм для сохранения результатов" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Ny4-rJ-q6p">
                                 <rect key="frame" x="75" y="454" width="264" height="34"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" textContentType="nickname"/>
                                 <connections>
                                     <action selector="nicknamePressed:" destination="Y6W-OH-hqX" eventType="editingDidEnd" id="v39-bW-Cre"/>
@@ -91,7 +91,7 @@
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="i1E-dd-7zw" secondAttribute="trailing" constant="54" id="aAh-2L-3fQ"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="dr6-aO-n87" secondAttribute="trailing" constant="40" id="c6R-wS-fY9"/>
                             <constraint firstItem="Ny4-rJ-q6p" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="75" id="ckM-7q-2TU"/>
-                            <constraint firstItem="dr6-aO-n87" firstAttribute="top" secondItem="Ny4-rJ-q6p" secondAttribute="bottom" constant="30" id="hF8-Dv-bec"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="dr6-aO-n87" secondAttribute="bottom" constant="30" id="hwM-Zc-TLR"/>
                             <constraint firstItem="Ny4-rJ-q6p" firstAttribute="top" secondItem="iY9-dG-hF6" secondAttribute="bottom" constant="44" id="nZR-wN-SnO"/>
                             <constraint firstItem="iY9-dG-hF6" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="10" id="oD5-5j-Nlu"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Ny4-rJ-q6p" secondAttribute="trailing" constant="75" id="piq-mu-qF6"/>
