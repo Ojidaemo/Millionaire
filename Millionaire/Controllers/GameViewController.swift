@@ -10,6 +10,7 @@ import AVFoundation
 
 class GameViewController: UIViewController {
     
+    @IBOutlet weak var fiftyHint: UIButton!
     @IBOutlet weak var winMoney: UILabel!
     @IBOutlet weak var numOfQuestion: UILabel!
     @IBOutlet weak var currentQuestion: UILabel!
@@ -20,6 +21,7 @@ class GameViewController: UIViewController {
     var shuffledAnswers: [String] = []
     var num = 0
     var takeMoneyPressed = false
+    var fiftyHintPressed = false
     var secondRemaining = 30 // needs to be changed to 30 sec
     var timer = Timer()
     var audioPlayer = AudioPlayer()
@@ -82,12 +84,13 @@ class GameViewController: UIViewController {
             } else {
                 questionsVC?.numOfQuestion = 15
             }
+            questionsVC?.fiftyHint = fiftyHintPressed
             questionsVC?.status = quiz.answerStatus
             questionsVC?.takeMoney = takeMoneyPressed
             if num != 14 {
                 quiz.questionNumber -= 1
             }
-            if quiz.questionNumber != -1 {
+            if timerLabel.text != "Время вышло!" {
                 questionsVC?.winMoney = quiz.winMoney
             } else {
                 questionsVC?.timeOff = 0
@@ -115,6 +118,10 @@ class GameViewController: UIViewController {
         // by default interaction with moneyButton is disabled since player cannot withdraw anything until he provides correct answers to the first question
         if num > 0 {
             moneyButton.isUserInteractionEnabled = true
+        }
+        if num > 0 && fiftyHintPressed == true {
+            fiftyHint.isUserInteractionEnabled = false
+            fiftyHint.setBackgroundImage(UIImage(named: "Frame 7"), for: .normal)
         }
     }
     
@@ -147,5 +154,26 @@ class GameViewController: UIViewController {
         takeMoneyPressed = true
         
         self.performSegue(withIdentifier: "goToQuestions", sender: self)
+    }
+    
+    @IBAction func fiftyHintButton(_ sender: UIButton) {
+        for index in answerButtons.indices {
+            var status = 0
+            let button = answerButtons[index]
+            for answer in quiz.fiftyHintAnswers.indices {
+                if button.titleLabel?.text != quiz.fiftyHintAnswers[answer]{
+                    status += 1
+                }
+                if status == 4 {
+                    button.isEnabled = false
+                    UIView.animate(withDuration: 0.3) {
+                        button.alpha = 0
+                    }
+                }
+            }
+        }
+        sender.self.isUserInteractionEnabled = false
+        sender.self.setBackgroundImage(UIImage(named: "Frame 7"), for: .normal)
+        fiftyHintPressed = true
     }
 }

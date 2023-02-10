@@ -33,6 +33,14 @@ struct QuizBrain {
         return result
     }
     
+    var fiftyHintAnswers: [String] {
+        var result = currentAnswers
+        result[0] = ""
+        result[1] = ""
+        //.removeFirst()
+        return result
+    }
+    
     func checkAnswer(_ answer: String) -> Bool {
         if quiz[questionNumber].correctAnswer == answer {
             return true
