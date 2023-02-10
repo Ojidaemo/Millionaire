@@ -23,6 +23,9 @@
 		87BE26832991049900BAFB28 /* RulesStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87BE26822991049900BAFB28 /* RulesStoryboard.storyboard */; };
 		C632C0CE299158A7005E66ED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C632C0CD299158A7005E66ED /* Main.storyboard */; };
 		C632C0D029915A0A005E66ED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C632C0CF29915A0A005E66ED /* LaunchScreen.storyboard */; };
+		FC0366C62996918400510C03 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0366C52996918400510C03 /* Result.swift */; };
+		FC0366C82996A63E00510C03 /* ResultsStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC0366C72996A63E00510C03 /* ResultsStoryboard.storyboard */; };
+		FC0366CA2996A65600510C03 /* ResultsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0366C92996A65600510C03 /* ResultsTableViewController.swift */; };
 		FC3CEB9D299248BC008FFC5A /* questions.json in Resources */ = {isa = PBXBuildFile; fileRef = FC3CEB9B299248BC008FFC5A /* questions.json */; };
 		FC3CEBA1299248D3008FFC5A /* QuizBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3CEB9E299248D3008FFC5A /* QuizBrain.swift */; };
 		FC3CEBA2299248D3008FFC5A /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3CEB9F299248D3008FFC5A /* Question.swift */; };
@@ -49,6 +52,9 @@
 		87BE26822991049900BAFB28 /* RulesStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = RulesStoryboard.storyboard; sourceTree = "<group>"; };
 		C632C0CD299158A7005E66ED /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		C632C0CF29915A0A005E66ED /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FC0366C52996918400510C03 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		FC0366C72996A63E00510C03 /* ResultsStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ResultsStoryboard.storyboard; sourceTree = "<group>"; };
+		FC0366C92996A65600510C03 /* ResultsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsTableViewController.swift; sourceTree = "<group>"; };
 		FC3CEB9B299248BC008FFC5A /* questions.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = questions.json; sourceTree = "<group>"; };
 		FC3CEB9E299248D3008FFC5A /* QuizBrain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuizBrain.swift; sourceTree = "<group>"; };
 		FC3CEB9F299248D3008FFC5A /* Question.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
@@ -114,6 +120,7 @@
 				8791031F2990FD6D00E6CE83 /* ViewController.swift */,
 				87708B95299176A4009A4EE5 /* RulesViewController.swift */,
 				7CA52A8C299248EE001D9FE5 /* GameViewController.swift */,
+				FC0366C92996A65600510C03 /* ResultsTableViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -125,6 +132,7 @@
 				FCCA7D39299154EA004E460B /* QuestionsStoryboard.storyboard */,
 				87BE26822991049900BAFB28 /* RulesStoryboard.storyboard */,
 				7CA52A8A299248E7001D9FE5 /* GameStoryboard.storyboard */,
+				FC0366C72996A63E00510C03 /* ResultsStoryboard.storyboard */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -136,6 +144,7 @@
 				FC3CEB9E299248D3008FFC5A /* QuizBrain.swift */,
 				FC3CEB9B299248BC008FFC5A /* questions.json */,
 				877F8C1529937BEF00ED3C5F /* AudioPlayer.swift */,
+				FC0366C52996918400510C03 /* Result.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -215,6 +224,7 @@
 				879103252990FD6E00E6CE83 /* Assets.xcassets in Resources */,
 				87BE26832991049900BAFB28 /* RulesStoryboard.storyboard in Resources */,
 				7CA52A8B299248E7001D9FE5 /* GameStoryboard.storyboard in Resources */,
+				FC0366C82996A63E00510C03 /* ResultsStoryboard.storyboard in Resources */,
 				C632C0CE299158A7005E66ED /* Main.storyboard in Resources */,
 				8791033A2990FF7A00E6CE83 /* wrongAnswer.wav in Resources */,
 				FC3CEB9D299248BC008FFC5A /* questions.json in Resources */,
@@ -236,8 +246,10 @@
 				FC3CEBA2299248D3008FFC5A /* Question.swift in Sources */,
 				879103202990FD6D00E6CE83 /* ViewController.swift in Sources */,
 				FC3CEBA1299248D3008FFC5A /* QuizBrain.swift in Sources */,
+				FC0366CA2996A65600510C03 /* ResultsTableViewController.swift in Sources */,
 				FCCA7D38299154D1004E460B /* QuestionsViewController.swift in Sources */,
 				8791031C2990FD6D00E6CE83 /* AppDelegate.swift in Sources */,
+				FC0366C62996918400510C03 /* Result.swift in Sources */,
 				7CA52A8D299248EE001D9FE5 /* GameViewController.swift in Sources */,
 				877F8C1629937BEF00ED3C5F /* AudioPlayer.swift in Sources */,
 				8791031E2990FD6D00E6CE83 /* SceneDelegate.swift in Sources */,
