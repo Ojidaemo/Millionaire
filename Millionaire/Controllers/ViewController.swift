@@ -94,5 +94,11 @@ class ViewController: UIViewController, UITextFieldDelegate {
         self.view.endEditing(true)
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.destination is ResultsTableViewController {
+            let resultVC = segue.destination as? ResultsTableViewController
+            resultVC?.results = results
+        }
+    }
 }
 
