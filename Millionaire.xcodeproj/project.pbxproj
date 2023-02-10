@@ -23,8 +23,6 @@
 		87BE26832991049900BAFB28 /* RulesStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87BE26822991049900BAFB28 /* RulesStoryboard.storyboard */; };
 		C632C0CE299158A7005E66ED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C632C0CD299158A7005E66ED /* Main.storyboard */; };
 		C632C0D029915A0A005E66ED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C632C0CF29915A0A005E66ED /* LaunchScreen.storyboard */; };
-		ED825D362992D1060035D4BE /* EndGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED825D352992D1060035D4BE /* EndGameViewController.swift */; };
-		ED825D382992D11E0035D4BE /* EndGame.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED825D372992D11E0035D4BE /* EndGame.storyboard */; };
 		FC3CEB9D299248BC008FFC5A /* questions.json in Resources */ = {isa = PBXBuildFile; fileRef = FC3CEB9B299248BC008FFC5A /* questions.json */; };
 		FC3CEBA1299248D3008FFC5A /* QuizBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3CEB9E299248D3008FFC5A /* QuizBrain.swift */; };
 		FC3CEBA2299248D3008FFC5A /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3CEB9F299248D3008FFC5A /* Question.swift */; };
@@ -51,8 +49,6 @@
 		87BE26822991049900BAFB28 /* RulesStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = RulesStoryboard.storyboard; sourceTree = "<group>"; };
 		C632C0CD299158A7005E66ED /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		C632C0CF29915A0A005E66ED /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
-		ED825D352992D1060035D4BE /* EndGameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndGameViewController.swift; sourceTree = "<group>"; };
-		ED825D372992D11E0035D4BE /* EndGame.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = EndGame.storyboard; sourceTree = "<group>"; };
 		FC3CEB9B299248BC008FFC5A /* questions.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = questions.json; sourceTree = "<group>"; };
 		FC3CEB9E299248D3008FFC5A /* QuizBrain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuizBrain.swift; sourceTree = "<group>"; };
 		FC3CEB9F299248D3008FFC5A /* Question.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
@@ -118,7 +114,6 @@
 				8791031F2990FD6D00E6CE83 /* ViewController.swift */,
 				87708B95299176A4009A4EE5 /* RulesViewController.swift */,
 				7CA52A8C299248EE001D9FE5 /* GameViewController.swift */,
-				ED825D352992D1060035D4BE /* EndGameViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -130,7 +125,6 @@
 				FCCA7D39299154EA004E460B /* QuestionsStoryboard.storyboard */,
 				87BE26822991049900BAFB28 /* RulesStoryboard.storyboard */,
 				7CA52A8A299248E7001D9FE5 /* GameStoryboard.storyboard */,
-				ED825D372992D11E0035D4BE /* EndGame.storyboard */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -227,7 +221,6 @@
 				8791033B2990FF7A00E6CE83 /* win.wav in Resources */,
 				FCCA7D3A299154EA004E460B /* QuestionsStoryboard.storyboard in Resources */,
 				C632C0D029915A0A005E66ED /* LaunchScreen.storyboard in Resources */,
-				ED825D382992D11E0035D4BE /* EndGame.storyboard in Resources */,
 				879103392990FF7A00E6CE83 /* correctAnswer.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -248,7 +241,6 @@
 				7CA52A8D299248EE001D9FE5 /* GameViewController.swift in Sources */,
 				877F8C1629937BEF00ED3C5F /* AudioPlayer.swift in Sources */,
 				8791031E2990FD6D00E6CE83 /* SceneDelegate.swift in Sources */,
-				ED825D362992D1060035D4BE /* EndGameViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
