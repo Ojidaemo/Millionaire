@@ -39,6 +39,18 @@ class QuestionsViewController: UIViewController {
         updateUI()
     }
     
+    
+    
+    @IBAction func buttonPressed(_ sender: UIButton) {
+        
+        if sender.currentTitle == "Продолжить игру" {
+            performSegue(withIdentifier: "goToGame", sender: self)
+        } else {
+            performSegue(withIdentifier: "goToMain", sender: self)
+        }
+        
+    }
+    
     func updateUI() {
                 
             for i in 0..<questionsArray.count {
@@ -123,13 +135,14 @@ class QuestionsViewController: UIViewController {
 
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.destination is GameViewController {
+        if segue.identifier == "goToGame" {
             let gameVC = segue.destination as? GameViewController
             if goGameButton.currentTitle == "Продолжить игру" {
                 gameVC?.num  = numOfQuestion
                 gameVC?.fiftyHintPressed = fiftyHint
             } else {
                 gameVC?.num = 0
+                
             }
         }
     }

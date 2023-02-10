@@ -295,7 +295,7 @@
                                                 <fontDescription key="titleFontDescription" type="boldSystem" pointSize="20"/>
                                             </buttonConfiguration>
                                             <connections>
-                                                <segue destination="UHI-FB-6GT" kind="presentation" modalPresentationStyle="fullScreen" id="Pao-cf-8q4"/>
+                                                <action selector="buttonPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="FGX-lJ-j1e"/>
                                             </connections>
                                         </button>
                                     </subviews>
@@ -344,11 +344,21 @@
                         <outletCollection property="questionsArray" destination="Dgu-8k-T18" collectionClass="NSMutableArray" id="CZH-DB-XOa"/>
                         <outletCollection property="questionsArray" destination="8p6-2p-FH2" collectionClass="NSMutableArray" id="5EV-qX-Zt8"/>
                         <outletCollection property="questionsArray" destination="dAY-Mu-zcF" collectionClass="NSMutableArray" id="ntr-ue-ZNH"/>
+                        <segue destination="GpJ-yc-EDD" kind="presentation" identifier="goToMain" modalPresentationStyle="fullScreen" id="wcc-PZ-2YZ"/>
+                        <segue destination="UHI-FB-6GT" kind="presentation" identifier="goToGame" modalPresentationStyle="fullScreen" id="jO9-qU-eaM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="15.942028985507248" y="-2.6785714285714284"/>
+        </scene>
+        <!--MainVC-->
+        <scene sceneID="LyK-h6-owX">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Main" referencedIdentifier="MainVC" id="GpJ-yc-EDD" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ies-ff-YK1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="676" y="37"/>
         </scene>
         <!--Game-->
         <scene sceneID="NbX-qF-3Cf">
