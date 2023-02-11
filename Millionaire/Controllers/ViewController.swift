@@ -29,11 +29,10 @@ class ViewController: UIViewController, UITextFieldDelegate {
             }
         }
     }
-    var name = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //results.removeAll()
+        //        results.removeAll()
         nicknameField.delegate = self
         saveResults()
     }
@@ -45,11 +44,9 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func newGameButtonPressed(_ sender: Any) {
-        if nicknameField.text != "" {
-            result.name = nicknameField.text!
-            result.winMoney = ""
-            results.append(result)
-        }
+        result.name = nicknameField.text!
+        result.winMoney = ""
+        results.append(result)
     }
     
     @IBAction func nicknamePressed(_ sender: Any) {
@@ -74,22 +71,30 @@ class ViewController: UIViewController, UITextFieldDelegate {
                 print(res)
                 result.name = results[res].name
                 print(result.name)
-                if res == results.count - 1 {
+                if res == results.count - 1 && result.name != "" {
                     results.append(result)
                 }
             }
         }
         print(results)
-        for res in results.indices {
-            print(res)
-            if results[res].name == "" || results[res].winMoney == "" {
-                results.remove(at: res)
-                break
-            }
-        }
+        results = removeEmpty(array: &results)
+        results = removeEmpty(array: &results)
         print("newwwwwwwwwwwwwwww",results)
         
     }
+    
+    func removeEmpty ( array: inout [Result]) -> [Result] {
+        var array = array
+        for res in array.indices {
+            print(res)
+            if array[res].name == "" || array[res].winMoney == "" {
+                array.remove(at: res)
+                break
+            }
+        }
+        return array
+    }
+    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
     }
