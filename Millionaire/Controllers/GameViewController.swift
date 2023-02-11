@@ -10,6 +10,7 @@ import AVFoundation
 
 class GameViewController: UIViewController {
     
+    @IBOutlet weak var callHint: UIButton!
     @IBOutlet weak var fiftyHint: UIButton!
     @IBOutlet weak var winMoney: UILabel!
     @IBOutlet weak var numOfQuestion: UILabel!
@@ -22,6 +23,7 @@ class GameViewController: UIViewController {
     var num = 0
     var takeMoneyPressed = false
     var fiftyHintPressed = false
+    var callHintPressed = false
     var secondRemaining = 30 // needs to be changed to 30 sec
     var timer = Timer()
     var audioPlayer = AudioPlayer()
@@ -85,6 +87,7 @@ class GameViewController: UIViewController {
                 questionsVC?.numOfQuestion = 15
             }
             questionsVC?.fiftyHint = fiftyHintPressed
+            questionsVC?.callHint = callHintPressed
             questionsVC?.status = quiz.answerStatus
             questionsVC?.takeMoney = takeMoneyPressed
             if num != 14 {
@@ -122,6 +125,10 @@ class GameViewController: UIViewController {
         if num > 0 && fiftyHintPressed == true {
             fiftyHint.isUserInteractionEnabled = false
             fiftyHint.setBackgroundImage(UIImage(named: "Frame 7"), for: .normal)
+        }
+        if num > 0 && callHintPressed == true {
+            callHint.isUserInteractionEnabled = false
+            callHint.setBackgroundImage(UIImage(named: "Frame 9"), for: .normal)
         }
     }
     
@@ -175,5 +182,20 @@ class GameViewController: UIViewController {
         sender.self.isUserInteractionEnabled = false
         sender.self.setBackgroundImage(UIImage(named: "Frame 7"), for: .normal)
         fiftyHintPressed = true
+    }
+    
+    
+    @IBAction func callHintButton(_ sender: UIButton) {
+        let rundomAnswer = quiz.answersForCallHint.randomElement()
+        for index in answerButtons.indices {
+            let button = answerButtons[index]
+            if button.currentTitle == rundomAnswer {
+                    button.setBackgroundImage(UIImage(named: "Rectangle yellow"), for: .normal)
+            }
+           
+        }
+        sender.self.isUserInteractionEnabled = false
+        sender.self.setBackgroundImage(UIImage(named: "Frame 9"), for: .normal)
+        callHintPressed = true
     }
 }

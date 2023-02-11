@@ -11,6 +11,7 @@ class QuestionsViewController: UIViewController {
     
     var numOfQuestion = 0
     var fiftyHint = false
+    var callHint = false
     var status = ""
     var timeOff = 10
     var winMoney = ""
@@ -146,6 +147,7 @@ class QuestionsViewController: UIViewController {
             if goGameButton.currentTitle == "Продолжить игру" {
                 gameVC?.num  = numOfQuestion
                 gameVC?.fiftyHintPressed = fiftyHint
+                gameVC?.callHintPressed = callHint
             } else {
                 gameVC?.num = 0
                 

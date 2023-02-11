@@ -89,6 +89,9 @@
                                         <rect key="frame" x="242" y="0.0" width="111" height="100"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title=" " backgroundImage="Group 30"/>
+                                        <connections>
+                                            <action selector="callHintButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Jpd-zk-x7b"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -185,6 +188,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="callHint" destination="FAN-tE-ok0" id="HuH-Si-4tF"/>
                         <outlet property="currentQuestion" destination="Cdh-qF-0MK" id="esx-zn-NTu"/>
                         <outlet property="fiftyHint" destination="wcs-ku-ZLe" id="gle-qW-C00"/>
                         <outlet property="moneyButton" destination="I25-yV-CJo" id="LHF-Tf-ba2"/>
