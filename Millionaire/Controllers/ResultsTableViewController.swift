@@ -12,7 +12,7 @@ class ResultsTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.tableView.backgroundView =  UIImageView(image: UIImage(named: "emptyBack"))
+        self.tableView.backgroundView =  UIImageView(image: UIImage(named: "peopleBack"))
     }
     
     
@@ -33,20 +33,19 @@ class ResultsTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ResultCell", for: indexPath)
         let result = results[indexPath.row]
+        cell.textLabel?.textColor = .white
+        cell.textLabel?.font = .systemFont(ofSize: 20)
         cell.textLabel?.numberOfLines = 0
         cell.textLabel?.text = "\(result.name) \nВыигрыш составляет \(result.winMoney) RUB"
         
         return cell
     }
-    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return "Результаты"
-    }
     
-    override func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
-        
-        let header = view as! UITableViewHeaderFooterView
-        header.textLabel?.textColor = .black
-        header.textLabel?.font = UIFont(name: "Helvetica-Regular", size: 17)
-        
-    }
+//    override func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+//
+//        let header = view as! UITableViewHeaderFooterView
+//        header.textLabel?.textColor = .white
+//        header.textLabel?.font = UIFont(name: "Helvetica-Regular", size: 17)
+//
+//    }
 }
