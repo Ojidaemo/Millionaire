@@ -12,6 +12,7 @@ class QuestionsViewController: UIViewController {
     var numOfQuestion = 0
     var fiftyHint = false
     var callHint = false
+    var helpHint = false
     var status = ""
     var timeOff = 10
     var winMoney = ""
@@ -148,6 +149,7 @@ class QuestionsViewController: UIViewController {
                 gameVC?.num  = numOfQuestion
                 gameVC?.fiftyHintPressed = fiftyHint
                 gameVC?.callHintPressed = callHint
+                gameVC?.helpHintPressed = helpHint
             } else {
                 gameVC?.num = 0
                 

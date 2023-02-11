@@ -84,6 +84,9 @@
                                         <rect key="frame" x="121" y="0.0" width="111" height="100"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title=" " backgroundImage="Group 29"/>
+                                        <connections>
+                                            <action selector="helpHintButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Ote-wm-Bhu"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FAN-tE-ok0">
                                         <rect key="frame" x="242" y="0.0" width="111" height="100"/>
@@ -191,6 +194,7 @@
                         <outlet property="callHint" destination="FAN-tE-ok0" id="HuH-Si-4tF"/>
                         <outlet property="currentQuestion" destination="Cdh-qF-0MK" id="esx-zn-NTu"/>
                         <outlet property="fiftyHint" destination="wcs-ku-ZLe" id="gle-qW-C00"/>
+                        <outlet property="helpHint" destination="0t8-ol-y3c" id="fSV-nf-Yos"/>
                         <outlet property="moneyButton" destination="I25-yV-CJo" id="LHF-Tf-ba2"/>
                         <outlet property="numOfQuestion" destination="7R4-lQ-a9y" id="sa3-Lm-2AV"/>
                         <outlet property="timerLabel" destination="nI6-9f-rkW" id="LJe-lY-uIc"/>

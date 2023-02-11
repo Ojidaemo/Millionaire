@@ -33,6 +33,19 @@ struct QuizBrain {
         return result
     }
     
+    var answersForHelpHint: [String] {
+            var result = [String]()
+            for _ in 0...69 {
+                result.append(quiz[questionNumber].correctAnswer)
+            }
+            for _ in 0...9 {
+                for answer in quiz[questionNumber].wrongAnswers.indices {
+                    result.append(quiz[questionNumber].wrongAnswers[answer])
+                }
+            }
+            result.removeLast()
+            return result
+        }
     var answersForCallHint: [String] {
             var result = [String]()
             for _ in 0...79 {
