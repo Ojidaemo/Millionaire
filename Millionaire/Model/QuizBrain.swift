@@ -10,7 +10,7 @@ import Foundation
 struct QuizBrain {
     
     let quiz = Question.questions()
-    var questionNumber: Int = 12
+    var questionNumber: Int = 0
     var answerStatus = "wrong"
     
     var winMoney: String {
