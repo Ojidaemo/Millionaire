@@ -10,6 +10,7 @@ import AVFoundation
 
 class GameViewController: UIViewController {
     
+    @IBOutlet weak var helpHint: UIButton!
     @IBOutlet weak var callHint: UIButton!
     @IBOutlet weak var fiftyHint: UIButton!
     @IBOutlet weak var winMoney: UILabel!
@@ -24,6 +25,7 @@ class GameViewController: UIViewController {
     var takeMoneyPressed = false
     var fiftyHintPressed = false
     var callHintPressed = false
+    var helpHintPressed = false
     var secondRemaining = 30 // needs to be changed to 30 sec
     var timer = Timer()
     var audioPlayer = AudioPlayer()
@@ -88,6 +90,7 @@ class GameViewController: UIViewController {
             }
             questionsVC?.fiftyHint = fiftyHintPressed
             questionsVC?.callHint = callHintPressed
+            questionsVC?.helpHint = helpHintPressed
             questionsVC?.status = quiz.answerStatus
             questionsVC?.takeMoney = takeMoneyPressed
             if num != 14 {
@@ -129,6 +132,10 @@ class GameViewController: UIViewController {
         if num > 0 && callHintPressed == true {
             callHint.isUserInteractionEnabled = false
             callHint.setBackgroundImage(UIImage(named: "Frame 9"), for: .normal)
+        }
+        if num > 0 && helpHintPressed == true {
+            helpHint.isUserInteractionEnabled = false
+            helpHint.setBackgroundImage(UIImage(named: "Frame 8"), for: .normal)
         }
     }
     
@@ -190,12 +197,30 @@ class GameViewController: UIViewController {
         for index in answerButtons.indices {
             let button = answerButtons[index]
             if button.currentTitle == rundomAnswer {
-                    button.setBackgroundImage(UIImage(named: "Rectangle yellow"), for: .normal)
+                button.setBackgroundImage(UIImage(named: "Rectangle yellow"), for: .normal)
             }
-           
+            
         }
         sender.self.isUserInteractionEnabled = false
         sender.self.setBackgroundImage(UIImage(named: "Frame 9"), for: .normal)
         callHintPressed = true
+    }
+    
+    @IBAction func helpHintButton(_ sender: UIButton) {
+        let alert = UIAlertController(title: "correct", message: "", preferredStyle: .alert)
+        let action = UIAlertAction(title: "Ok", style: .default) { (action) in }
+        alert.addAction(action)
+        let rundomAnswer = quiz.answersForHelpHint.randomElement()
+        for index in answerButtons.indices {
+            let button = answerButtons[index]
+            if button.currentTitle == rundomAnswer {
+                alert.title = rundomAnswer
+                present(alert, animated: true)
+            }
+            
+        }
+        sender.self.isUserInteractionEnabled = false
+        sender.self.setBackgroundImage(UIImage(named: "Frame 8"), for: .normal)
+        helpHintPressed = true
     }
 }
