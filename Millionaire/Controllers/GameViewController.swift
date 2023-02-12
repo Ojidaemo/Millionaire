@@ -67,7 +67,7 @@ class GameViewController: UIViewController {
         audioPlayer.playSound(soundName: "answerAccepted")
         
         // таймер для задержки перехода
-        Timer.scheduledTimer(withTimeInterval: 2, repeats: false) { timer in
+        Timer.scheduledTimer(withTimeInterval: 5, repeats: false) { timer in
             
             if userGotItRight {
                 self.quiz.answerStatus = "right"
