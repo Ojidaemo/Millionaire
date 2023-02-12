@@ -9,6 +9,7 @@
 import Foundation
 
 struct Question: Decodable {
+    
     let winMoney: String
     let ask: String
     let correctAnswer: String
