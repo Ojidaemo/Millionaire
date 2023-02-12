@@ -207,14 +207,14 @@ class GameViewController: UIViewController {
     }
     
     @IBAction func helpHintButton(_ sender: UIButton) {
-        let alert = UIAlertController(title: "correct", message: "", preferredStyle: .alert)
+        let alert = UIAlertController(title: "Мнение зрителей зала:", message: "", preferredStyle: .alert)
         let action = UIAlertAction(title: "Ok", style: .default) { (action) in }
         alert.addAction(action)
         let rundomAnswer = quiz.answersForHelpHint.randomElement()
         for index in answerButtons.indices {
             let button = answerButtons[index]
             if button.currentTitle == rundomAnswer {
-                alert.title = rundomAnswer
+                alert.message = rundomAnswer
                 present(alert, animated: true)
             }
             
