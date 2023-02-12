@@ -116,10 +116,10 @@
 		879103302990FDFA00E6CE83 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				FCCA7D37299154D1004E460B /* QuestionsViewController.swift */,
 				8791031F2990FD6D00E6CE83 /* ViewController.swift */,
-				87708B95299176A4009A4EE5 /* RulesViewController.swift */,
 				7CA52A8C299248EE001D9FE5 /* GameViewController.swift */,
+				FCCA7D37299154D1004E460B /* QuestionsViewController.swift */,
+				87708B95299176A4009A4EE5 /* RulesViewController.swift */,
 				FC0366C92996A65600510C03 /* ResultsTableViewController.swift */,
 			);
 			path = Controllers;
@@ -129,9 +129,9 @@
 			isa = PBXGroup;
 			children = (
 				C632C0CD299158A7005E66ED /* Main.storyboard */,
+				7CA52A8A299248E7001D9FE5 /* GameStoryboard.storyboard */,
 				FCCA7D39299154EA004E460B /* QuestionsStoryboard.storyboard */,
 				87BE26822991049900BAFB28 /* RulesStoryboard.storyboard */,
-				7CA52A8A299248E7001D9FE5 /* GameStoryboard.storyboard */,
 				FC0366C72996A63E00510C03 /* ResultsStoryboard.storyboard */,
 			);
 			path = Views;

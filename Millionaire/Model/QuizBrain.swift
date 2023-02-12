@@ -46,6 +46,7 @@ struct QuizBrain {
             result.removeLast()
             return result
         }
+    
     var answersForCallHint: [String] {
             var result = [String]()
             for _ in 0...79 {

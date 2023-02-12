@@ -10,6 +10,7 @@ import UIKit
 class ViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var nicknameField: UITextField!
+    
     var status = false
     var result = Result(name: "", winMoney: "")
     var results: [Result] {

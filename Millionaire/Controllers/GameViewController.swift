@@ -51,6 +51,8 @@ class GameViewController: UIViewController {
         let userAnswer = sender.currentTitle!
         let userGotItRight = quiz.checkAnswer(userAnswer)
         
+        moneyButton.isUserInteractionEnabled = false
+        
         // остановить таймер
         timer.invalidate()
         
@@ -82,7 +84,9 @@ class GameViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.destination is QuestionsViewController {
+            
             let questionsVC = segue.destination as? QuestionsViewController
+            
             if num != 14 {
                 questionsVC?.numOfQuestion = quiz.questionNumber
             } else {
@@ -93,6 +97,7 @@ class GameViewController: UIViewController {
             questionsVC?.helpHint = helpHintPressed
             questionsVC?.status = quiz.answerStatus
             questionsVC?.takeMoney = takeMoneyPressed
+            
             if num != 14 {
                 quiz.questionNumber -= 1
             }
